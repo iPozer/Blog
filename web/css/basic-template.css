@@ -35,7 +35,7 @@ html, body {
     margin:0;
     width:100%;
     height: 100%;
-    color: #66dd66;
+    color: #262626;
 
  }
 
@@ -53,7 +53,7 @@ html, body {
 }
 
 #left, #right {
-    background-color: whitesmoke;
+    background-color: #dfdfdf;
     width: 20%;
     /*height: 100%;*/
     padding: 0;
@@ -74,7 +74,12 @@ a {
 
 main {
     background-color: black;
+    color: #FFFFFF;
     width: 60%;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /*here i must add another properties of flex*/
 
 
 }
@@ -93,6 +98,39 @@ main {
     border-bottom: 1px solid forestgreen;
     text-align: center;
 }
+
+#article {
+    background-color: rgba(68, 68, 68, 0.5);
+    width:90%;
+    height: min-content;
+    margin:10px auto;
+}
+
+.artTitle {
+    background-color: #5eb5e0;
+}
+.artTitle h2 {
+    text-align: center;
+}
+
+.artTitle, .autor, .datePubl, .timePubl, .picArt, .descriptArt {
+    margin: 0 10px;
+}
+
+#artPic {
+    width:100%;
+    height:40%;
+}
+
+form {
+    margin: 5px;
+}
+
+
+
+
+
+
 
 
 
