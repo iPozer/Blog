@@ -16,6 +16,8 @@
       <parameter key="SwiftmailerBundle">Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
+      <parameter key="DoctrineCacheBundle">Doctrine\Bundle\DoctrineCacheBundle\DoctrineCacheBundle</parameter>
+      <parameter key="KnpMarkdownBundle">Knp\Bundle\MarkdownBundle\KnpMarkdownBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
@@ -58,6 +60,16 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">/home/valeria/projects/Blog/vendor/sensio/framework-extra-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
+      </parameter>
+      <parameter key="DoctrineCacheBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/home/valeria/projects/Blog/vendor/doctrine/doctrine-cache-bundle</parameter>
+        <parameter key="namespace">Doctrine\Bundle\DoctrineCacheBundle</parameter>
+      </parameter>
+      <parameter key="KnpMarkdownBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/home/valeria/projects/Blog/vendor/knplabs/knp-markdown-bundle</parameter>
+        <parameter key="namespace">Knp\Bundle\MarkdownBundle</parameter>
       </parameter>
       <parameter key="AppBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -326,6 +338,7 @@
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
     <parameter key="doctrine.orm.proxy_dir">/home/valeria/projects/Blog/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
+    <parameter key="templating.helper.markdown.class">Knp\Bundle\MarkdownBundle\Helper\MarkdownHelper</parameter>
     <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
@@ -2575,6 +2588,9 @@
         <argument type="service" id="doctrine.twig.doctrine_extension"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="twig.extension.exercise.twig"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.webprofiler"/>
       </call>
       <call method="addGlobal">
@@ -3409,6 +3425,51 @@
     <service id="framework_extra_bundle.argument_name_convertor" class="Sensio\Bundle\FrameworkExtraBundle\Request\ArgumentNameConverter" public="false">
       <argument type="service" id="argument_metadata_factory"/>
     </service>
+    <service id="markdown.parser.min" class="Knp\Bundle\MarkdownBundle\Parser\Preset\Min" public="false">
+      <tag name="markdown.parser" alias="min"/>
+    </service>
+    <service id="markdown.parser.light" class="Knp\Bundle\MarkdownBundle\Parser\Preset\Light" public="false">
+      <tag name="markdown.parser" alias="light"/>
+    </service>
+    <service id="markdown.parser.medium" class="Knp\Bundle\MarkdownBundle\Parser\Preset\Medium" public="false">
+      <tag name="markdown.parser" alias="medium"/>
+    </service>
+    <service id="markdown.parser.max" class="Knp\Bundle\MarkdownBundle\Parser\Preset\Max" public="false">
+      <tag name="markdown.parser" alias="max"/>
+    </service>
+    <service id="markdown.parser.flavored" class="Knp\Bundle\MarkdownBundle\Parser\Preset\Flavored" public="false">
+      <tag name="markdown.parser" alias="flavored"/>
+    </service>
+    <service id="markdown.parser.parser_manager" class="Knp\Bundle\MarkdownBundle\Parser\ParserManager" public="false">
+      <call method="addParser">
+        <argument type="service" id="markdown.parser.min"/>
+        <argument>min</argument>
+      </call>
+      <call method="addParser">
+        <argument type="service" id="markdown.parser.light"/>
+        <argument>light</argument>
+      </call>
+      <call method="addParser">
+        <argument type="service" id="markdown.parser.medium"/>
+        <argument>medium</argument>
+      </call>
+      <call method="addParser">
+        <argument type="service" id="markdown.parser.max"/>
+        <argument>default</argument>
+      </call>
+      <call method="addParser">
+        <argument type="service" id="markdown.parser.flavored"/>
+        <argument>flavored</argument>
+      </call>
+    </service>
+    <service id="templating.helper.markdown" class="Knp\Bundle\MarkdownBundle\Helper\MarkdownHelper">
+      <tag name="templating.helper" alias="markdown"/>
+      <argument type="service" id="markdown.parser.parser_manager"/>
+    </service>
+    <service id="twig.extension.exercise.twig" class="Knp\Bundle\MarkdownBundle\Twig\Extension\MarkdownTwigExtension" public="false">
+      <tag name="twig.extension"/>
+      <argument type="service" id="markdown.parser.parser_manager"/>
+    </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="var_dumper.cloner"/>
@@ -4002,6 +4063,9 @@
     <service id="doctrine.orm.default_entity_manager.event_manager" alias="doctrine.dbal.default_connection.event_manager" public="false"/>
     <service id="sensio_framework_extra.converter.doctrine.orm.expression_language" alias="sensio_framework_extra.converter.doctrine.orm.expression_language.default" public="false"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
+    <service id="markdown.parser" alias="markdown.parser.max" public="true"/>
+    <service id="Knp\Bundle\MarkdownBundle\MarkdownParserInterface" alias="markdown.parser.max"/>
+    <service id="Michelf\MarkdownInterface" alias="markdown.parser.max"/>
     <service id="console.command.doctrine_bundle_doctrinecachebundle_command_containscommand" alias="doctrine_cache.contains_command" public="true"/>
     <service id="console.command.doctrine_bundle_doctrinecachebundle_command_deletecommand" alias="doctrine_cache.delete_command" public="true"/>
     <service id="console.command.doctrine_bundle_doctrinecachebundle_command_flushcommand" alias="doctrine_cache.flush_command" public="true"/>
