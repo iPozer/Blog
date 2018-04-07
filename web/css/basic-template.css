@@ -78,13 +78,19 @@ main {
 
 
 }
+#search input{
+    width:90%;
+    margin:5px;
+    padding-left:10px;
+}
 
 /*----------------Home----------------------*/
 
 #userStatus {
     width:100%;
     height:30px;
-    border: 1px solid black;
+    border-top: 1px solid forestgreen;
+    border-bottom: 1px solid forestgreen;
     text-align: center;
 }
 

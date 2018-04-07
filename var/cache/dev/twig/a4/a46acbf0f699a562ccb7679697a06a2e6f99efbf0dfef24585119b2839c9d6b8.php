@@ -67,7 +67,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
 
         <aside id=\"right\">
-            <div class = \"search\"><input type = \"text\" placeholder=\"search\"></div><br>
+            <div id = \"search\"><input type = \"text\" placeholder=\"search\"></div><br>
 
             <div id = \"userStatus\">
                 ";
@@ -153,7 +153,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
                         <ul class=\"navigation\">
                             <li><a href=\"/\">Home</a></li>
                             <li><a href=\"#\">About</a></li>
-                            <li> <a href = \"#\">Add a new</a></li>
+                            <li> <a href = \"#\">Add a new post</a></li>
                             <li><a href=\"#\">Contact</a></li>
                         </ul>
                         Created by <a href=\"https://github.com/Leratony\">Leratony</a>
@@ -285,7 +285,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
                         <ul class=\"navigation\">
                             <li><a href=\"/\">Home</a></li>
                             <li><a href=\"#\">About</a></li>
-                            <li> <a href = \"#\">Add a new</a></li>
+                            <li> <a href = \"#\">Add a new post</a></li>
                             <li><a href=\"#\">Contact</a></li>
                         </ul>
                         Created by <a href=\"https://github.com/Leratony\">Leratony</a>
@@ -302,7 +302,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
 
         <aside id=\"right\">
-            <div class = \"search\"><input type = \"text\" placeholder=\"search\"></div><br>
+            <div id = \"search\"><input type = \"text\" placeholder=\"search\"></div><br>
 
             <div id = \"userStatus\">
                 {% block user %}{% endblock %}
