@@ -12,6 +12,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
+            'user' => array($this, 'block_user'),
             'sidebar' => array($this, 'block_sidebar'),
             'javascripts' => array($this, 'block_javascripts'),
         );
@@ -109,6 +110,26 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
     }
 
     // line 43
+    public function block_user($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "user"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "user"));
+
+        // line 44
+        echo "            <span>Hello, guest!</span>
+            ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 47
     public function block_sidebar($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -117,7 +138,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
 
-        // line 44
+        // line 48
         echo "
             <div class = \"formWrapper\">
                 <form action=\"/\" name = \"Enter\" method = \"post\">
@@ -195,7 +216,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
 
     }
 
-    // line 117
+    // line 121
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -224,7 +245,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
 
     public function getDebugInfo()
     {
-        return array (  199 => 117,  121 => 44,  112 => 43,  70 => 9,  61 => 8,  43 => 4,  11 => 2,);
+        return array (  220 => 121,  142 => 48,  133 => 47,  122 => 44,  113 => 43,  71 => 9,  62 => 8,  44 => 4,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -278,6 +299,10 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
             <div class = \"commentsAndViews\"> 5 comments 123 views </div>
 
         {% endblock %}
+
+            {% block user %}
+            <span>Hello, guest!</span>
+            {% endblock %}
 
             {% block sidebar %}
 

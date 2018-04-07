@@ -14,6 +14,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
             'stylesheets' => array($this, 'block_stylesheets'),
             'navigation' => array($this, 'block_navigation'),
             'body' => array($this, 'block_body'),
+            'user' => array($this, 'block_user'),
             'sidebar' => array($this, 'block_sidebar'),
             'javascripts' => array($this, 'block_javascripts'),
         );
@@ -67,19 +68,27 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
         <aside id=\"right\">
             <div class = \"search\"><input type = \"text\" placeholder=\"search\"></div><br>
-            ";
-        // line 40
-        $this->displayBlock('sidebar', $context, $blocks);
+
+            <div id = \"userStatus\">
+                ";
         // line 42
+        $this->displayBlock('user', $context, $blocks);
+        // line 43
+        echo "            </div>
+
+            ";
+        // line 45
+        $this->displayBlock('sidebar', $context, $blocks);
+        // line 47
         echo "        </aside>
     </div>
 
 
 
         ";
-        // line 47
+        // line 52
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 48
+        // line 53
         echo "    </body>
 </html>
 ";
@@ -177,7 +186,24 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
     }
 
-    // line 40
+    // line 42
+    public function block_user($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "user"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "user"));
+
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 45
     public function block_sidebar($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -186,7 +212,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
 
-        // line 41
+        // line 46
         echo "            ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -196,7 +222,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
     }
 
-    // line 47
+    // line 52
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -225,7 +251,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
     public function getDebugInfo()
     {
-        return array (  200 => 47,  190 => 41,  181 => 40,  164 => 34,  143 => 18,  134 => 17,  121 => 7,  112 => 6,  95 => 5,  83 => 48,  81 => 47,  74 => 42,  72 => 40,  65 => 35,  63 => 34,  57 => 30,  55 => 17,  43 => 9,  41 => 6,  37 => 5,  31 => 1,);
+        return array (  226 => 52,  216 => 46,  207 => 45,  190 => 42,  173 => 34,  152 => 18,  143 => 17,  130 => 7,  121 => 6,  104 => 5,  92 => 53,  90 => 52,  83 => 47,  81 => 45,  77 => 43,  75 => 42,  66 => 35,  64 => 34,  58 => 30,  56 => 17,  44 => 9,  42 => 6,  38 => 5,  32 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -277,6 +303,11 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
         <aside id=\"right\">
             <div class = \"search\"><input type = \"text\" placeholder=\"search\"></div><br>
+
+            <div id = \"userStatus\">
+                {% block user %}{% endblock %}
+            </div>
+
             {% block sidebar %}
             {% endblock %}
         </aside>

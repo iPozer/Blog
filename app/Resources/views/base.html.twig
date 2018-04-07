@@ -37,6 +37,11 @@
 
         <aside id="right">
             <div class = "search"><input type = "text" placeholder="search"></div><br>
+
+            <div id = "userStatus">
+                {% block user %}{% endblock %}
+            </div>
+
             {% block sidebar %}
             {% endblock %}
         </aside>
