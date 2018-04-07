@@ -19,9 +19,9 @@ class HomeController extends Controller
      */
     public function showAction()
     {
-        $twig = $this->container->get('twig');
-        $html = $twig->render('home/show.html.twig');
-        return new Response($html);
+
+        return $this->render('home/show.html.twig');
+
     }
 
     public function loginAction()
@@ -33,4 +33,6 @@ class HomeController extends Controller
     {
         //здесь будет запрос на добавление пользователя, проверка куки и сессии и т.д.
     }
+
+
 }

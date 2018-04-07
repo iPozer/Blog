@@ -122,6 +122,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_app_home_show:
 
+        // app_user_show
+        if (preg_match('#^/(?P<username>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_user_show')), array (  '_controller' => 'AppBundle\\Controller\\UserController::showAction',));
+        }
+
         if ('/' === $pathinfo) {
             throw new Symfony\Component\Routing\Exception\NoConfigurationException();
         }
