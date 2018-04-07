@@ -107,6 +107,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // app_about_show
+        if ('/about' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\AboutController::showAction',  '_route' => 'app_about_show',);
+        }
+
         // app_home_show
         if ('' === $trimmedPathinfo) {
             $ret = array (  '_controller' => 'AppBundle\\Controller\\HomeController::showAction',  '_route' => 'app_home_show',);
