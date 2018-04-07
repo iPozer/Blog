@@ -52,8 +52,8 @@ html, body {
 
 }
 
-#left {
-    background-color: rgba(48, 113, 115, 0.3);
+#left, #right {
+    background-color: whitesmoke;
     width: 20%;
     /*height: 100%;*/
     padding: 0;
@@ -82,12 +82,7 @@ main {
 
 
 
-#right {
-    background-color: rgba(48, 113, 115, 0.3);
-    width: 20%;
 
-
-}
 
 
 

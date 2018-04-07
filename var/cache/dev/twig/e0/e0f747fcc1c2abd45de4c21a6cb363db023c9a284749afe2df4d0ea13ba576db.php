@@ -7,16 +7,18 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
+        // line 2
+        $this->parent = $this->loadTemplate("base.html.twig", "home/show.html.twig", 2);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
-            'stylesheets' => array($this, 'block_stylesheets'),
-            'navigation' => array($this, 'block_navigation'),
             'body' => array($this, 'block_body'),
-            'sidebar' => array($this, 'block_sidebar'),
             'javascripts' => array($this, 'block_javascripts'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -27,73 +29,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "home/show.html.twig"));
 
-        // line 1
-        echo "
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv=\"Content-Type\" content=\"text/html\"; charset=utf-8\" />
-    <title>";
-        // line 8
-        $this->displayBlock('title', $context, $blocks);
-        echo " - Blog</title>
-    <!--[if lt IE 9]>
-    <script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>
-    <![endif]-->
-    ";
-        // line 12
-        $this->displayBlock('stylesheets', $context, $blocks);
-        // line 16
-        echo "    <link rel=\"shortcut icon\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("favicon.ico"), "html", null, true);
-        echo "\" />
-</head>
-<body>
-
-<main id=\"wrapper\">
-
-
-    <aside id=\"left\">
-        <h1>VA Blog</h1>
-        <div class=\"top\">
-            ";
-        // line 26
-        $this->displayBlock('navigation', $context, $blocks);
-        // line 39
-        echo "        </div>
-
-
-
-
-
-    </aside>
-
-    <main>
-        ";
-        // line 48
-        $this->displayBlock('body', $context, $blocks);
-        // line 82
-        echo "    </main>
-
-    <aside id=\"right\">
-        ";
-        // line 85
-        $this->displayBlock('sidebar', $context, $blocks);
-        // line 165
-        echo "    </aside>
-
-
-</main>
-
-
-";
-        // line 171
-        $this->displayBlock('javascripts', $context, $blocks);
-        // line 172
-        echo "</body>
-</html>";
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -102,7 +38,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
 
     }
 
-    // line 8
+    // line 4
     public function block_title($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -111,7 +47,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "VA Blog";
+        echo "Home";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -120,60 +56,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
 
     }
 
-    // line 12
-    public function block_stylesheets($context, array $blocks = array())
-    {
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        // line 13
-        echo "        <link rel='stylesheet' href= \"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/basic-template.css"), "html", null, true);
-        echo "\">
-
-    ";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 26
-    public function block_navigation($context, array $blocks = array())
-    {
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navigation"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navigation"));
-
-        // line 27
-        echo "                <nav>
-                    <ul class=\"navigation\">
-                        <li><a href=\"/\">Home</a></li>
-                        <li><a href=\"#\">About</a></li>
-                        <li> <a href = \"#\">Add a new</a></li>
-                        <li><a href=\"#\">Contact</a></li>
-                    </ul>
-                    Created by <a href=\"https://github.com/Leratony\">Leratony</a>
-
-
-                </nav>
-            ";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 48
+    // line 10
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -182,7 +65,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 49
+        // line 11
         echo "
         <div>
             <div class=\"artTitle\">
@@ -224,104 +107,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
 
     }
 
-    // line 85
-    public function block_sidebar($context, array $blocks = array())
-    {
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
-
-        // line 86
-        echo "            <div class = \"search\"><input type = \"text\" placeholder=\"search\"></div><br>
-
-
-            <div class = \"formWrapper\">
-                <form action=\"/\" name = \"Enter\" method = \"post\">
-                    <label class = \"Login\"> Log In:<br>
-                        <input type =\"text\" name = \"login\"/>
-                    </label><br>
-
-                    <label class = \"Password\"> Enter password:<br>
-                        <input type =\"password\" name = \"pswd1\"/>
-                    </label>
-                    <div id = \"forgotten\"><a href = \"#\">Forgot your password?</a></div>
-
-
-                    <input type = \"submit\" name = \"EnterSend\" value = \"Log In\">
-                </form><br>
-            </div>
-
-
-            <div class = \"formWrapper\">
-                <form action = \"/\" name = \"Registration\" method=\"post\">
-                    <label class = \"Name\"> Name: <br>
-                        <input type =\"text\" name = \"UserName\">
-                    </label>
-
-
-                    <label> Surame: <br>
-                        <input type =\"text\" name = \"UserSurName\">
-                    </label>
-
-                    <span class = \"Gender_wr\" datatype=\"radio\">
-                    <span class = \"gndr\">
-                         <input type=\"radio\" name=\"sex\" value=\"1\" id = \"g_m\">
-                        <label class = g_1 for=\"g_m\"> Male</label>
-                    </span>
-                    <span class = \"gndr\">
-                        <input type=\"radio\" name=\"sex\" value=\"2\" id = \"g_f\">
-                        <label class = g_1 for=\"g_f\"> Female </label>
-                    </span>
-
-                </span>
-
-
-            </div>
-            <div class = \"BDayDiv\">
-
-                <label>Birthday:</label>
-                <input type = \"date\" name = \"date\">
-            </div>
-
-            <label> Enter password:<br>
-                <input type =\"password\" name = \"pswd\">
-            </label>
-
-            <label> Confirm password:<br>
-                <input type =\"password\" name = \"pswd_confirm\"><br>
-            </label>
-
-            <div class = \"regConf\">
-
-                <input type = \"submit\" name = \"reg\" value = \"Register\">
-
-
-                <div class =\"warn\">
-                    By clicking Create an account, you agree to our Terms and confirm that you have read our Data Policy, including our Cookie Use Policy
-                </div>
-            </div>
-            </form>
-            </div>
-
-
-
-
-
-
-
-
-        ";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 171
+    // line 48
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -350,7 +136,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
 
     public function getDebugInfo()
     {
-        return array (  325 => 171,  237 => 86,  228 => 85,  186 => 49,  177 => 48,  156 => 27,  147 => 26,  133 => 13,  124 => 12,  106 => 8,  95 => 172,  93 => 171,  85 => 165,  83 => 85,  78 => 82,  76 => 48,  65 => 39,  63 => 26,  49 => 16,  47 => 12,  40 => 8,  31 => 1,);
+        return array (  111 => 48,  69 => 11,  60 => 10,  42 => 4,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -364,52 +150,14 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
     public function getSourceContext()
     {
         return new Twig_Source("
+{% extends 'base.html.twig' %}
 
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv=\"Content-Type\" content=\"text/html\"; charset=utf-8\" />
-    <title>{% block title %}VA Blog{% endblock %} - Blog</title>
-    <!--[if lt IE 9]>
-    <script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>
-    <![endif]-->
-    {% block stylesheets %}
-        <link rel='stylesheet' href= \"{{ asset('css/basic-template.css')}}\">
-
-    {% endblock %}
-    <link rel=\"shortcut icon\" href=\"{{ asset('favicon.ico') }}\" />
-</head>
-<body>
-
-<main id=\"wrapper\">
-
-
-    <aside id=\"left\">
-        <h1>VA Blog</h1>
-        <div class=\"top\">
-            {% block navigation %}
-                <nav>
-                    <ul class=\"navigation\">
-                        <li><a href=\"/\">Home</a></li>
-                        <li><a href=\"#\">About</a></li>
-                        <li> <a href = \"#\">Add a new</a></li>
-                        <li><a href=\"#\">Contact</a></li>
-                    </ul>
-                    Created by <a href=\"https://github.com/Leratony\">Leratony</a>
-
-
-                </nav>
-            {% endblock %}
-        </div>
+    {% block title %}Home{% endblock %}
 
 
 
 
 
-    </aside>
-
-    <main>
         {% block body %}
 
         <div>
@@ -444,97 +192,11 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
             <div class = \"commentsAndViews\"> 5 comments 123 views </div>
 
         {% endblock %}
-    </main>
-
-    <aside id=\"right\">
-        {% block sidebar %}
-            <div class = \"search\"><input type = \"text\" placeholder=\"search\"></div><br>
 
 
-            <div class = \"formWrapper\">
-                <form action=\"/\" name = \"Enter\" method = \"post\">
-                    <label class = \"Login\"> Log In:<br>
-                        <input type =\"text\" name = \"login\"/>
-                    </label><br>
-
-                    <label class = \"Password\"> Enter password:<br>
-                        <input type =\"password\" name = \"pswd1\"/>
-                    </label>
-                    <div id = \"forgotten\"><a href = \"#\">Forgot your password?</a></div>
-
-
-                    <input type = \"submit\" name = \"EnterSend\" value = \"Log In\">
-                </form><br>
-            </div>
-
-
-            <div class = \"formWrapper\">
-                <form action = \"/\" name = \"Registration\" method=\"post\">
-                    <label class = \"Name\"> Name: <br>
-                        <input type =\"text\" name = \"UserName\">
-                    </label>
-
-
-                    <label> Surame: <br>
-                        <input type =\"text\" name = \"UserSurName\">
-                    </label>
-
-                    <span class = \"Gender_wr\" datatype=\"radio\">
-                    <span class = \"gndr\">
-                         <input type=\"radio\" name=\"sex\" value=\"1\" id = \"g_m\">
-                        <label class = g_1 for=\"g_m\"> Male</label>
-                    </span>
-                    <span class = \"gndr\">
-                        <input type=\"radio\" name=\"sex\" value=\"2\" id = \"g_f\">
-                        <label class = g_1 for=\"g_f\"> Female </label>
-                    </span>
-
-                </span>
-
-
-            </div>
-            <div class = \"BDayDiv\">
-
-                <label>Birthday:</label>
-                <input type = \"date\" name = \"date\">
-            </div>
-
-            <label> Enter password:<br>
-                <input type =\"password\" name = \"pswd\">
-            </label>
-
-            <label> Confirm password:<br>
-                <input type =\"password\" name = \"pswd_confirm\"><br>
-            </label>
-
-            <div class = \"regConf\">
-
-                <input type = \"submit\" name = \"reg\" value = \"Register\">
-
-
-                <div class =\"warn\">
-                    By clicking Create an account, you agree to our Terms and confirm that you have read our Data Policy, including our Cookie Use Policy
-                </div>
-            </div>
-            </form>
-            </div>
-
-
-
-
-
-
-
-
-        {% endblock %}
-    </aside>
-
-
-</main>
 
 
 {% block javascripts %}{% endblock %}
-</body>
-</html>", "home/show.html.twig", "/home/valeria/projects/Blog/app/Resources/views/home/show.html.twig");
+", "home/show.html.twig", "/home/valeria/projects/Blog/app/Resources/views/home/show.html.twig");
     }
 }
