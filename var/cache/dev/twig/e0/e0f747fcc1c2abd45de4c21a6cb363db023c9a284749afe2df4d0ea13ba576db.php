@@ -81,7 +81,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
         ";
         // line 85
         $this->displayBlock('sidebar', $context, $blocks);
-        // line 99
+        // line 165
         echo "    </aside>
 
 
@@ -89,9 +89,9 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
 
 
 ";
-        // line 105
+        // line 171
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 106
+        // line 172
         echo "</body>
 </html>";
         
@@ -155,7 +155,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
         // line 27
         echo "                <nav>
                     <ul class=\"navigation\">
-                        <li><a href=\"/main\">Home</a></li>
+                        <li><a href=\"/\">Home</a></li>
                         <li><a href=\"#\">About</a></li>
                         <li> <a href = \"#\">Add a new</a></li>
                         <li><a href=\"#\">Contact</a></li>
@@ -185,23 +185,23 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
         // line 49
         echo "
         <div>
-            <div class=\"shopUnitName\">
+            <div class=\"artTitle\">
                 <h2>Title of article</h2>
             </div>
             <div class = \"autor\">
                 <span>Author: John Doe</span>
             </div>
-            <div class=\"shopUnitPrice\">
+            <div class=\"datePubl\">
                 <span>Date: 01/01/2018</span>
             </div>
-            <div class = \"time\">
+            <div class = \"timePubl\">
                 <span>Time: 23:03:44 </span>
             </div>
-            <div class=\"shopUnit\">
+            <div class=\"picArt\">
                 <img src=\"http://placehold.it/308x231\" />
 
 
-                <div class=\"shopUnitShortDesc\">
+                <div class=\"descriptArt\">
 
                     Here will be a content of news <br>
                     Here will be a content of news<br>
@@ -209,11 +209,11 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
                     Here will be a content of news<br>
 
                 </div>
-                <a href=\"#\" class=\"shopUnitMore\">
+                <a href=\"#\" class=\"artMore\">
                     More...
                 </a>
             </div>
-            <div class = \"comments_and_views\"> 5 comments 123 views </div>
+            <div class = \"commentsAndViews\"> 5 comments 123 views </div>
 
         ";
         
@@ -234,18 +234,84 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
 
         // line 86
-        echo "            <form action=\"/main\" name = \"Enter\" method = \"post\">
-                <label class = \"Login\"> Log In:<br>
+        echo "            <div class = \"search\"><input type = \"text\" placeholder=\"search\"></div><br>
+
+
+            <div class = \"formWrapper\">
+                <form action=\"/\" name = \"Enter\" method = \"post\">
+                    <label class = \"Login\"> Log In:<br>
                         <input type =\"text\" name = \"login\"/>
                     </label><br>
 
-                <label class = \"Password1\"> Enter password:<br>
+                    <label class = \"Password\"> Enter password:<br>
                         <input type =\"password\" name = \"pswd1\"/>
+                    </label>
+                    <div id = \"forgotten\"><a href = \"#\">Forgot your password?</a></div>
+
+
+                    <input type = \"submit\" name = \"EnterSend\" value = \"Log In\">
+                </form><br>
+            </div>
+
+
+            <div class = \"formWrapper\">
+                <form action = \"/\" name = \"Registration\" method=\"post\">
+                    <label class = \"Name\"> Name: <br>
+                        <input type =\"text\" name = \"UserName\">
                     </label>
 
 
-                <input type = \"submit\" name = \"EnterSend\" value = \"Log In\">
+                    <label> Surame: <br>
+                        <input type =\"text\" name = \"UserSurName\">
+                    </label>
+
+                    <span class = \"Gender_wr\" datatype=\"radio\">
+                    <span class = \"gndr\">
+                         <input type=\"radio\" name=\"sex\" value=\"1\" id = \"g_m\">
+                        <label class = g_1 for=\"g_m\"> Male</label>
+                    </span>
+                    <span class = \"gndr\">
+                        <input type=\"radio\" name=\"sex\" value=\"2\" id = \"g_f\">
+                        <label class = g_1 for=\"g_f\"> Female </label>
+                    </span>
+
+                </span>
+
+
+            </div>
+            <div class = \"BDayDiv\">
+
+                <label>Birthday:</label>
+                <input type = \"date\" name = \"date\">
+            </div>
+
+            <label> Enter password:<br>
+                <input type =\"password\" name = \"pswd\">
+            </label>
+
+            <label> Confirm password:<br>
+                <input type =\"password\" name = \"pswd_confirm\"><br>
+            </label>
+
+            <div class = \"regConf\">
+
+                <input type = \"submit\" name = \"reg\" value = \"Register\">
+
+
+                <div class =\"warn\">
+                    By clicking Create an account, you agree to our Terms and confirm that you have read our Data Policy, including our Cookie Use Policy
+                </div>
+            </div>
             </form>
+            </div>
+
+
+
+
+
+
+
+
         ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -255,7 +321,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
 
     }
 
-    // line 105
+    // line 171
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -284,7 +350,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
 
     public function getDebugInfo()
     {
-        return array (  259 => 105,  237 => 86,  228 => 85,  186 => 49,  177 => 48,  156 => 27,  147 => 26,  133 => 13,  124 => 12,  106 => 8,  95 => 106,  93 => 105,  85 => 99,  83 => 85,  78 => 82,  76 => 48,  65 => 39,  63 => 26,  49 => 16,  47 => 12,  40 => 8,  31 => 1,);
+        return array (  325 => 171,  237 => 86,  228 => 85,  186 => 49,  177 => 48,  156 => 27,  147 => 26,  133 => 13,  124 => 12,  106 => 8,  95 => 172,  93 => 171,  85 => 165,  83 => 85,  78 => 82,  76 => 48,  65 => 39,  63 => 26,  49 => 16,  47 => 12,  40 => 8,  31 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -325,7 +391,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
             {% block navigation %}
                 <nav>
                     <ul class=\"navigation\">
-                        <li><a href=\"/main\">Home</a></li>
+                        <li><a href=\"/\">Home</a></li>
                         <li><a href=\"#\">About</a></li>
                         <li> <a href = \"#\">Add a new</a></li>
                         <li><a href=\"#\">Contact</a></li>
@@ -347,23 +413,23 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
         {% block body %}
 
         <div>
-            <div class=\"shopUnitName\">
+            <div class=\"artTitle\">
                 <h2>Title of article</h2>
             </div>
             <div class = \"autor\">
                 <span>Author: John Doe</span>
             </div>
-            <div class=\"shopUnitPrice\">
+            <div class=\"datePubl\">
                 <span>Date: 01/01/2018</span>
             </div>
-            <div class = \"time\">
+            <div class = \"timePubl\">
                 <span>Time: 23:03:44 </span>
             </div>
-            <div class=\"shopUnit\">
+            <div class=\"picArt\">
                 <img src=\"http://placehold.it/308x231\" />
 
 
-                <div class=\"shopUnitShortDesc\">
+                <div class=\"descriptArt\">
 
                     Here will be a content of news <br>
                     Here will be a content of news<br>
@@ -371,29 +437,95 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
                     Here will be a content of news<br>
 
                 </div>
-                <a href=\"#\" class=\"shopUnitMore\">
+                <a href=\"#\" class=\"artMore\">
                     More...
                 </a>
             </div>
-            <div class = \"comments_and_views\"> 5 comments 123 views </div>
+            <div class = \"commentsAndViews\"> 5 comments 123 views </div>
 
         {% endblock %}
     </main>
 
     <aside id=\"right\">
         {% block sidebar %}
-            <form action=\"/main\" name = \"Enter\" method = \"post\">
-                <label class = \"Login\"> Log In:<br>
+            <div class = \"search\"><input type = \"text\" placeholder=\"search\"></div><br>
+
+
+            <div class = \"formWrapper\">
+                <form action=\"/\" name = \"Enter\" method = \"post\">
+                    <label class = \"Login\"> Log In:<br>
                         <input type =\"text\" name = \"login\"/>
                     </label><br>
 
-                <label class = \"Password1\"> Enter password:<br>
+                    <label class = \"Password\"> Enter password:<br>
                         <input type =\"password\" name = \"pswd1\"/>
+                    </label>
+                    <div id = \"forgotten\"><a href = \"#\">Forgot your password?</a></div>
+
+
+                    <input type = \"submit\" name = \"EnterSend\" value = \"Log In\">
+                </form><br>
+            </div>
+
+
+            <div class = \"formWrapper\">
+                <form action = \"/\" name = \"Registration\" method=\"post\">
+                    <label class = \"Name\"> Name: <br>
+                        <input type =\"text\" name = \"UserName\">
                     </label>
 
 
-                <input type = \"submit\" name = \"EnterSend\" value = \"Log In\">
+                    <label> Surame: <br>
+                        <input type =\"text\" name = \"UserSurName\">
+                    </label>
+
+                    <span class = \"Gender_wr\" datatype=\"radio\">
+                    <span class = \"gndr\">
+                         <input type=\"radio\" name=\"sex\" value=\"1\" id = \"g_m\">
+                        <label class = g_1 for=\"g_m\"> Male</label>
+                    </span>
+                    <span class = \"gndr\">
+                        <input type=\"radio\" name=\"sex\" value=\"2\" id = \"g_f\">
+                        <label class = g_1 for=\"g_f\"> Female </label>
+                    </span>
+
+                </span>
+
+
+            </div>
+            <div class = \"BDayDiv\">
+
+                <label>Birthday:</label>
+                <input type = \"date\" name = \"date\">
+            </div>
+
+            <label> Enter password:<br>
+                <input type =\"password\" name = \"pswd\">
+            </label>
+
+            <label> Confirm password:<br>
+                <input type =\"password\" name = \"pswd_confirm\"><br>
+            </label>
+
+            <div class = \"regConf\">
+
+                <input type = \"submit\" name = \"reg\" value = \"Register\">
+
+
+                <div class =\"warn\">
+                    By clicking Create an account, you agree to our Terms and confirm that you have read our Data Policy, including our Cookie Use Policy
+                </div>
+            </div>
             </form>
+            </div>
+
+
+
+
+
+
+
+
         {% endblock %}
     </aside>
 

@@ -108,9 +108,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         // app_home_show
-        if ('/home' === $pathinfo) {
-            return array (  '_controller' => 'AppBundle\\Controller\\HomeController::showAction',  '_route' => 'app_home_show',);
+        if ('' === $trimmedPathinfo) {
+            $ret = array (  '_controller' => 'AppBundle\\Controller\\HomeController::showAction',  '_route' => 'app_home_show',);
+            if ('/' === substr($pathinfo, -1)) {
+                // no-op
+            } elseif ('GET' !== $canonicalMethod) {
+                goto not_app_home_show;
+            } else {
+                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'app_home_show'));
+            }
+
+            return $ret;
         }
+        not_app_home_show:
 
         if ('/' === $pathinfo) {
             throw new Symfony\Component\Routing\Exception\NoConfigurationException();

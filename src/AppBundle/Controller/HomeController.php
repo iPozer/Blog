@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 class HomeController extends Controller
 {
     /**
-     * @Route("/home")
+     * @Route("/")
      */
     public function showAction()
     {
