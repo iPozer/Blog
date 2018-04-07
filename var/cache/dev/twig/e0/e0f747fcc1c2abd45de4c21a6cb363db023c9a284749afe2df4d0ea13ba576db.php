@@ -12,6 +12,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
+            'sidebar' => array($this, 'block_sidebar'),
             'javascripts' => array($this, 'block_javascripts'),
         );
     }
@@ -56,7 +57,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
 
     }
 
-    // line 10
+    // line 8
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -65,7 +66,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 11
+        // line 9
         echo "
         <div>
             <div class=\"artTitle\">
@@ -107,7 +108,94 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
 
     }
 
-    // line 48
+    // line 43
+    public function block_sidebar($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sidebar"));
+
+        // line 44
+        echo "
+            <div class = \"formWrapper\">
+                <form action=\"/\" name = \"Enter\" method = \"post\">
+                    <label class = \"Login\"> Log In:<br>
+                        <input type =\"text\" name = \"login\"/>
+                    </label><br>
+
+                    <label class = \"Password\"> Enter password:<br>
+                        <input type =\"password\" name = \"pswd1\"/>
+                    </label>
+                    <div id = \"forgotten\"><a href = \"#\">Forgot your password?</a></div>
+
+
+                    <input type = \"submit\" name = \"EnterSend\" value = \"Log In\">
+                </form><br>
+            </div>
+
+
+            <div class = \"formWrapper\">
+                <form action = \"/\" name = \"Registration\" method=\"post\">
+                    <label class = \"Name\"> Name: <br>
+                        <input type =\"text\" name = \"UserName\">
+                    </label>
+
+
+                    <label> Surame: <br>
+                        <input type =\"text\" name = \"UserSurName\"><br>
+                    </label>
+
+                    <span class = \"Gender_wr\" datatype=\"radio\">
+                    <span class = \"gndr\">
+                         <input type=\"radio\" name=\"sex\" value=\"1\" id = \"g_m\">
+                        <label class = g_1 for=\"g_m\"> Male</label>
+                    </span>
+                    <span class = \"gndr\">
+                        <input type=\"radio\" name=\"sex\" value=\"2\" id = \"g_f\">
+                        <label class = g_1 for=\"g_f\"> Female </label>
+                    </span>
+
+                </span>
+
+
+            </div>
+            <div class = \"BDayDiv\">
+
+                <label>Birthday:</label>
+                <input type = \"date\" name = \"date\">
+            </div>
+
+            <label> Enter password:<br>
+                <input type =\"password\" name = \"pswd\">
+            </label>
+
+            <label> Confirm password:<br>
+                <input type =\"password\" name = \"pswd_confirm\"><br>
+            </label>
+
+            <div class = \"regConf\">
+
+                <input type = \"submit\" name = \"reg\" value = \"Register\">
+
+
+                <div class =\"warn\">
+                    By clicking Create an account, you agree to our Terms and confirm that you have read our Data Policy, including our Cookie Use Policy
+                </div>
+            </div>
+            </form>
+        </div>
+            ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 117
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -136,7 +224,7 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
 
     public function getDebugInfo()
     {
-        return array (  111 => 48,  69 => 11,  60 => 10,  42 => 4,  11 => 2,);
+        return array (  199 => 117,  121 => 44,  112 => 43,  70 => 9,  61 => 8,  43 => 4,  11 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -153,8 +241,6 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
 {% extends 'base.html.twig' %}
 
     {% block title %}Home{% endblock %}
-
-
 
 
 
@@ -192,6 +278,77 @@ class __TwigTemplate_006c81674b25aef45a4bdc3cec7be7e101822666b895340a3d72e95546f
             <div class = \"commentsAndViews\"> 5 comments 123 views </div>
 
         {% endblock %}
+
+            {% block sidebar %}
+
+            <div class = \"formWrapper\">
+                <form action=\"/\" name = \"Enter\" method = \"post\">
+                    <label class = \"Login\"> Log In:<br>
+                        <input type =\"text\" name = \"login\"/>
+                    </label><br>
+
+                    <label class = \"Password\"> Enter password:<br>
+                        <input type =\"password\" name = \"pswd1\"/>
+                    </label>
+                    <div id = \"forgotten\"><a href = \"#\">Forgot your password?</a></div>
+
+
+                    <input type = \"submit\" name = \"EnterSend\" value = \"Log In\">
+                </form><br>
+            </div>
+
+
+            <div class = \"formWrapper\">
+                <form action = \"/\" name = \"Registration\" method=\"post\">
+                    <label class = \"Name\"> Name: <br>
+                        <input type =\"text\" name = \"UserName\">
+                    </label>
+
+
+                    <label> Surame: <br>
+                        <input type =\"text\" name = \"UserSurName\"><br>
+                    </label>
+
+                    <span class = \"Gender_wr\" datatype=\"radio\">
+                    <span class = \"gndr\">
+                         <input type=\"radio\" name=\"sex\" value=\"1\" id = \"g_m\">
+                        <label class = g_1 for=\"g_m\"> Male</label>
+                    </span>
+                    <span class = \"gndr\">
+                        <input type=\"radio\" name=\"sex\" value=\"2\" id = \"g_f\">
+                        <label class = g_1 for=\"g_f\"> Female </label>
+                    </span>
+
+                </span>
+
+
+            </div>
+            <div class = \"BDayDiv\">
+
+                <label>Birthday:</label>
+                <input type = \"date\" name = \"date\">
+            </div>
+
+            <label> Enter password:<br>
+                <input type =\"password\" name = \"pswd\">
+            </label>
+
+            <label> Confirm password:<br>
+                <input type =\"password\" name = \"pswd_confirm\"><br>
+            </label>
+
+            <div class = \"regConf\">
+
+                <input type = \"submit\" name = \"reg\" value = \"Register\">
+
+
+                <div class =\"warn\">
+                    By clicking Create an account, you agree to our Terms and confirm that you have read our Data Policy, including our Cookie Use Policy
+                </div>
+            </div>
+            </form>
+        </div>
+            {% endblock %}
 
 
 

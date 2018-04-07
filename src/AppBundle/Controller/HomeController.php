@@ -23,4 +23,14 @@ class HomeController extends Controller
         $html = $twig->render('home/show.html.twig');
         return new Response($html);
     }
+
+    public function loginAction()
+    {
+        //здесь должно быть соединение с моделью бд, проверка сессии и вход
+    }
+
+    public function registerAction()
+    {
+        //здесь будет запрос на добавление пользователя, проверка куки и сессии и т.д.
+    }
 }
