@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>VA BLOG || {% block title %}{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
             <link rel='stylesheet' href= "{{ asset('css/basic-template.css')}}">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -13,7 +13,15 @@
     <body>
 
     <div id="wrapper">
+
         <aside id="left">
+
+            <div id = "search"><input type = "search" placeholder="search"></div><br>
+
+            {% block nav %}
+
+            {% endblock %}
+
             <div id = "NameAndLogo">
                 <div id = "Logo">VA</div>
                 <h1>Blog</h1>
@@ -119,7 +127,7 @@
 
 
         <aside id="right">
-            <div id = "search"><input type = "search" placeholder="search"></div><br>
+
 
             <div id = "userStatus">
                 {% block user %}{% endblock %}

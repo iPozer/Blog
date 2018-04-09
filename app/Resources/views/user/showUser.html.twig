@@ -2,8 +2,59 @@
 
 {% block title %}{{ username }}{% endblock %}
 
-{% block body %} {% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href= "{{ asset('css/basic-template.css')}}">
+{% endblock %}
+
+{% block nav %}
+    <div id = "userNameLink">
+        <img src = "#" id = "avatar_min">
+        <a href = "/{username}" id = "un">{{ username }}</a>
+    </div>
+{% endblock %}
+
+{% block body %}
+
+ <div id = "User">
+     <div id = "UserWrapper">
+
+         <div id = "cover_photo">
+             <img src = "#">
+             <button id = "add_cover">Add a cover photo</button>
+
+             <div class = "avatar_photo">
+                 <img src = "{{ asset('images/avatar.svg') }}">
+             </div>
+
+         </div>
+
+         <div class = "horizon_menu">
+             <ul>
+                 <li><a href= "#">Feed</a></li>
+                 <li><a href= "#">About Me</a></li>
+                 <li><a href= "#">Friends</a></li>
+                 <li><a href= "#">Messages</a></li>
+             </ul>
+         </div>
+     </div>
+
+     <div id = "UserWall">
+        <h1> Here will be a posts & feed </h1>
+     </div>
+ </div>
+
+
+{% endblock %}
 
 {% block user %}
     <span>Hello, {{ username }}!</span>
+{% endblock %}
+
+{% block sidebar %}
+
+    <div id = "userDiv">
+
+    </div>
+
 {% endblock %}
