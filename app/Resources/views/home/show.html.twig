@@ -69,53 +69,37 @@
 
             <br>
 
-            <div class = "formWrapper2">
-                <form action = "/" name = "Registration" method="post">
-                    <label class = "Name"> Name: <br>
-                        <input type ="text" name = "UserName">
-                    </label>
+                <div class="menu2">Register</div>
+                <div class="formWrapper">
+                    <form action="/" name="Registration" method="post">
+
+                        <input type="text" name="UserName" required placeholder="Your name">
+                        <input type="text" name="UserSurName" required placeholder="Your last name"><br>
 
 
-                    <label> Surame: <br>
-                        <input type ="text" name = "UserSurName"><br>
-                    </label>
-
-                    <div>
-                        <span class = "Gender_wr" datatype="radio">
+                        <div id="genderDiv">
+                            <span class="Gender_wr" datatype="radio">
                     <span class = "gndr">
-                         <input type="radio" name="sex" value="1" id = "g_m">
+                         <input type="radio" name="sex" value="1" id = "g_m" required>
                         <label class = g_1 for="g_m"> Male</label>
                     </span>
-                    <span class = "gndr">
-                        <input type="radio" name="sex" value="2" id = "g_f">
+                            <span class="gndr">
+                        <input type="radio" name="sex" value="2" id = "g_f" required>
                         <label class = g_1 for="g_f"> Female </label>
                     </span>
 
-                    </span>
-                    </div>
+      </span>
+                        </div>
+
+                        <input type="date" name="date">
+                        <input type="password" name="pswd" required placeholder="Think up password">
+                        <input type="password" name="pswd_confirm" required placeholder="Confirm password"><br>
+                        <input type="submit" name="reg" value="Register" class = "rg-btn">
 
 
-                <div class = "BDayDiv">
-
-                    <label>Birthday:</label>
-                    <input type = "date" name = "date">
+                    </form>
                 </div>
 
-                <label> Enter password:<br>
-                    <input type ="password" name = "pswd">
-                </label>
-
-                <label> Confirm password:<br>
-                    <input type ="password" name = "pswd_confirm"><br>
-                </label>
-
-                <div class = "regConf">
-
-                    <input type = "submit" name = "reg" value = "Register">
-
-                </div>
-                </form>
-             </div>
             {% endblock %}
 
 {% block javascripts %}
@@ -131,6 +115,20 @@
   });
 });
 </script>
+
+<script>
+    $(function (){
+        $('.menu2').click(function (){
+            $(this).toggleClass('active');
+            $('.formWrapper').slideToggle();
+        });
+        $('.rg-btn').click(function (){
+            $('.formWrapper').find('form').empty();
+        });
+    });
+</script>
+
+
 {% endblock %}
 
 
