@@ -2,6 +2,11 @@
 
     {% block title %}About me{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href= "{{ asset('css/basic-template.css')}}">
+{% endblock %}
+
     {% block body %}
         <div class = "aboutMe">
             <span>
@@ -17,3 +22,80 @@
     {% block user %}
         <span>Hello, guest!</span>
     {% endblock %}
+
+ {% block sidebar %}
+     <br>
+
+     <div id="accordion">
+         <div class="menu">Log In</div>
+         <div class = "formWrapper">
+
+             <form action="/" name = "Enter" method = "post">
+
+                 <input type ="text" name = "login" placeholder = "Login" id = "oneLogin" required autofocus>
+                 <input type ="password" name = "pswd" placeholder = "Password" required>
+                 <div id = "forgotten">
+                     <a href = "#">Forgot your password?</a>
+                 </div>
+                 <input type = "submit" name = "EnterSend" value = "Go!" >
+
+             </form>
+         </div>
+
+
+
+         <div class="menu">Register</div>
+
+         <div class="formWrapper">
+             <form action="/" name="Registration" method="post">
+
+                 <input type="text" name="UserName" required placeholder="Your name">
+                 <input type="text" name="UserSurName" required placeholder="Your last name"><br>
+
+
+                 <div id="genderDiv">
+                            <span class="Gender_wr" datatype="radio">
+                    <span class = "gndr">
+                         <input type="radio" name="sex" value="1" id = "g_m" required>
+                        <label class = g_1 for="g_m"> Male</label>
+                    </span>
+                            <span class="gndr">
+                        <input type="radio" name="sex" value="2" id = "g_f" required>
+                        <label class = g_1 for="g_f"> Female </label>
+                    </span>
+
+                            </span>
+                 </div>
+
+                 <input type="date" name="date">
+                 <input type="password" name="pswd" required placeholder="Think up password">
+                 <input type="password" name="pswd_confirm" required placeholder="Confirm password"><br>
+                 <input type="submit" name="reg" value="Register" class = "rg-btn">
+
+
+             </form>
+         </div>
+     </div>
+
+
+
+ {% endblock %}
+
+{% block javascripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <script>
+        $( function() {
+            $( "#accordion" ).accordion();
+        } );
+    </script>
+
+    <script>
+
+    </script>
+
+
+{% endblock %}

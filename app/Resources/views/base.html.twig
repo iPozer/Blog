@@ -14,25 +14,106 @@
 
     <div id="wrapper">
         <aside id="left">
-            <h1>VA Blog</h1>
-            <div class="top">
-                {% block navigation %}
-                    <nav>
+            <div id = "NameAndLogo">
+                <div id = "Logo">VA</div>
+                <h1>Blog</h1>
+            </div>
+
+                <nav class = "mainNav">
                         <ul class="navigation">
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">About</a></li>
                             <li> <a href = "/{username}/new">Add a new post</a></li>
                         </ul>
-                        Created by <a href="https://github.com/Leratony">Leratony</a>
+                        <div class = "copyright">Created by <a href="https://github.com/Leratony">Leratony</a></div>
+                </nav>
 
+                <div id = "mySocial">
+                    <ul>
+                        <li><img src ="images/facebook-logo-button.svg"></li>
+                        <li><img src ="images/google-plus-logo-button.svg"></li>
+                        <li><img src ="images/instagram-logo.svg"></li>
+                    </ul>
+                </div>
 
-                    </nav>
-                {% endblock %}
-            </div>
         </aside>
 
         <main>
-            {% block body %}{% endblock %}
+
+            {% block body %}
+
+                <div id = "article">
+                    <div class="artTitle">
+                        <h2>Title of article</h2>
+                    </div>
+                    <div class = "autor">
+                        <span>Author: John Doe</span>
+                    </div>
+                    <div class="datePubl">
+                        <span>Date: 01/01/2018</span>
+                    </div>
+                    <div class = "timePubl">
+                        <span>Time: 23:03:44 </span>
+                    </div>
+                    <div class="picArt">
+                        <img id = "artPic" src="https://getbg.net/upload/full/8/364015_motocikl_krasnyj_motocikly_1920x1200_(www.GetBg.net).jpg" />
+                    </div>
+
+                    <div class="descriptArt">
+
+                        Here will be a content of news <br>
+                        Here will be a content of news<br>
+                        Here will be a content of news<br>
+                        Here will be a content of news<br>
+
+                    </div>
+                    <a href="#" id="artMore">Read More</a>
+
+                    <div id = "commentsAndViews">
+                        <a id = "comments" href = "#">5 comments </a>
+                        <a id = "views" href = "#">123 views</a>
+                    </div>
+                </div>
+
+
+
+                <div id = "article">
+                    <div class="artTitle">
+                        <h2>Title of article</h2>
+                    </div>
+                    <div class = "autor">
+                        <span>Author: John Doe</span>
+                    </div>
+                    <div class="datePubl">
+                        <span>Date: 01/01/2018</span>
+                    </div>
+                    <div class = "timePubl">
+                        <span>Time: 23:03:44 </span>
+                    </div>
+                    <div class="picArt">
+                        <img id = "artPic" src="https://avatars.mds.yandex.net/get-pdb/225396/85939ff5-0439-4f28-98bb-3072850f871d/s1200?webp=false" />
+                    </div>
+
+                    <div class="descriptArt">
+
+                        Here will be a content of news <br>
+                        Here will be a content of news<br>
+                        Here will be a content of news<br>
+                        Here will be a content of news<br>
+
+                    </div>
+                    <a href="#" id="artMore">Read More</a>
+
+                    <div id = "commentsAndViews">
+                        <a id = "comments" href = "#">5 comments </a>
+                        <a id = "views" href = "#">123 views</a>
+                    </div>
+                </div>
+
+
+
+
+            {% endblock %}
         </main>
 
 

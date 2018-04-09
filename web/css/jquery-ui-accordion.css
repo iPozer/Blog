@@ -980,7 +980,7 @@ a.ui-button:active,
     border: 1px solid 808080;
     background: #dfdfdf;
     font-weight: normal;
-    color:  #0088CC;
+    /* color:  #0088CC; */
 }
 .ui-icon-background,
 .ui-state-active .ui-icon-background {

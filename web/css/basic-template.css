@@ -6,17 +6,17 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color:#ecedee
+    background-color: black;
 }
 
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 0px;
     border-radius: 0px;
-    background-color:#6dc0c8;
+    background-color: black;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-    background-color:#56999f;
+    background-color:black;
 }
 
 ::-webkit-resizer{
@@ -35,39 +35,87 @@ html, body {
     margin:0;
     width:100%;
     height: 100%;
-    color: #262626;
-
+    color: #FFFFFF;
+    overflow: auto;
  }
-
-
-
 
 #wrapper {
 
     width: 100%;
     height: 100%;
-    overflow: auto;
     display: flex;
-
 
 }
 
 #left, #right {
-    background-color: #dfdfdf;
+    background-color: black;
     width: 20%;
     height: 100%;
     padding: 0;
     margin: 0;
+    overflow: auto;
+}
 
+#left #NameAndLogo {
+    background-color: #6b9311;
+    margin-top:60%;
+    height:8%;
+    width: 100%;
+    display: inline-flex;
+    border-top: 4px solid #dfdfdf;
+
+}
+#left #NameAndLogo h1 {
+    text-align: center;
+    width: 50%;
+    line-height: 65px;
+}
+
+#left #NameAndLogo #Logo {
+    background-color: #0088CC;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30pt;
+    letter-spacing: -6px;
+    line-height: 65px;
 
 }
 
-
-
-a {
+#left a {
     text-decoration: none;
-    color: #0088CC;
+    color: black;
 }
+
+.mainNav {
+    background-color: #0088CC;
+}
+ .mainNav .navigation li{
+     list-style: none;
+     background-color: #6b9311;
+     margin-bottom: 10px;
+     padding: 8px;
+ }
+  .mainNav .copyright {
+      text-align: right;
+      padding: 10px;
+  }
+
+ #mySocial {
+     width: 100%;
+     height: 20%;
+     margin-top: 10%;
+
+ }
+  #mySocial li {
+      display: inline-block;
+      border: 2px solid #0088CC;
+      padding: 10% 11%;
+  }
+
+
+
 
 
 
@@ -85,7 +133,7 @@ main {
 }
 #search input{
     width:90%;
-    margin:5px;
+    margin:10px;
     padding-left:10px;
 }
 
@@ -107,51 +155,56 @@ form {
 .menu {
     width: 100%;
     height: 30px;
-    background: #fff;
+    background: black;
     text-align:center;
     padding: 0 10px;
-    color: #2b2b2b;
-    
+    color: #0088CC;
+
   }
- 
+
   .menu:active {
-    background:#dfdfdf;
+    background:#0088CC;
     color: #2b2b2b;
   }
   .formWrapper {
     width: 100%;
-    height: min-content;
+    height: min-content ;
     padding: 15px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    background: #fff;
-    border-top: 4px solid#dfdfdf;
+
+    background-color: black !important;
     display: none;
+      color: #66dd66 !important;
   }
-  
+
   .formWrapper input[type=text], .formWrapper input[type=password], .formWrapper input[type=date] {
     width: 100%;
     line-height: 32px;
     display: block;
     margin: 10px 0;
-    border: 1px solid #ddd;
+    border: none;
     text-indent: 10px;
+      background-color: #66dd66;
+  }
+  .formWrapper #oneLogin {
+      margin:30px 0;
   }
   .formWrapper #forgotten {
     text-align:center;
-    margin: 10px;
-    
+    margin: 20px;
+
   }
   .formWrapper #forgotten a {
     text-decoration:none;
-    color: black;
+    color:#66dd66;
   }
-  
+
   .formWrapper input[type=submit] {
     padding: 10px 20px;
     border: 0 none;
-    background: #dfdfdf;
+    background: #FFFFFF;
     font-size: 12px;
     text-transform: uppercase;
     position:relative;
