@@ -225,6 +225,7 @@ form {
     width:90%;
     height: min-content;
     margin:10px auto;
+
 }
 
 .artTitle {
@@ -232,10 +233,12 @@ form {
 }
 .artTitle h2 {
     text-align: center;
+    color: #FFFFFF;
 }
 
 .artTitle, .autor, .datePubl, .timePubl, .picArt, .descriptArt {
     margin: 0 10px;
+    color: #c5c5c5;
 }
 
 #artPic {
@@ -341,7 +344,7 @@ form {
     height: 150px;
     position: relative;
     left: 5%;
-    top: 55%;
+    top: 65%;
 }
 #UserWrapper .horizon_menu {
     background-color: #66dd66;
