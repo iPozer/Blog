@@ -378,7 +378,46 @@ form {
     height: 100%;
     overflow: auto;
     margin: 10px auto;
+}
 
+
+.rightMenu {
+
+    margin: 20px auto;
+    width: 90%;
+    height: min-content;
+
+}
+ .rightMenu ul {
+     width: 100%;
+     text-align: left;
+     margin-top: 50px;
+ }
+
+ .rightMenu ul li {
+    margin: 20px;
+     list-style: none;
+ }
+
+.rightMenu ul li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#0088CC;
+}
+  .rightMenu ul li .icons_right {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+  }
+
+  .rightMenu ul li .items_values {
+      width: 20px;
+      height: 20px;
+      margin-left: 30px;
+  }
+
+.rightMenu ul li:hover {
+    border: 1px solid #0088CC;
 }
 
 

@@ -31,10 +31,10 @@
 
          <div class = "horizon_menu">
              <ul>
-                 <li><a href= "#">Feed</a></li>
-                 <li><a href= "#">About Me</a></li>
-                 <li><a href= "#">Friends</a></li>
-                 <li><a href= "#">Messages</a></li>
+                 <li><a href= "#"> 2 Posts</a></li>
+                 <li><a href= "#"> 35 Followers</a></li>
+                 <li><a href= "#"> 3 Friends</a></li>
+                 <li><a href= "#"> 2 Messages</a></li>
              </ul>
          </div>
      </div>
@@ -51,10 +51,18 @@
     <span>Hello, {{ username }}!</span>
 {% endblock %}
 
+
+
+
 {% block sidebar %}
 
-    <div id = "userDiv">
-
+    <div class = "rightMenu">
+        <ul>
+            <li><img class = "icons_right" src  = "#"><a href= "#">Feed<img src  = "#" class = "items_values"></a></li>
+            <li><img class = "icons_right" src  = "#"><a href= "#">About Me</a></li>
+            <li><img class = "icons_right" src  = "#"><a href= "#">Friends<img src  = "#" class = "items_values"></a></li>
+            <li><img class = "icons_right" src  = "#"><a href= "#">Messages<img src  = "#" class = "items_values"></a></li>
+        </ul>
     </div>
 
 {% endblock %}
