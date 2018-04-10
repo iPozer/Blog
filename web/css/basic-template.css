@@ -307,7 +307,7 @@ form {
 
 
 #UserWrapper #cover_photo {
-    background-color: rgba(27%, 27%, 27%, 0.5);
+    background-color: #FFFFFF;
     width: 90%;
     height: 80%;
     margin: 20px auto;
@@ -327,6 +327,19 @@ form {
     left: 5%;
     top: 65%;
 }
+
+#UserWrapper #UserName {
+    position: absolute;
+    left: 40%;
+    top: 32%;
+}
+
+#UserWrapper #UserName h1 {
+    text-align: right;
+    color: rgba(0%, 0%, 0%, 0.5);
+}
+
+
 #UserWrapper .horizon_menu {
 
     border: 3px solid #6b9311;
@@ -337,6 +350,7 @@ form {
 
 #UserWrapper .horizon_menu li {
     display:inline-flex;
+    justify-content: space-between;
     flex-wrap: nowrap;
     line-height: 10px;
 
@@ -349,6 +363,7 @@ form {
 #UserWrapper .horizon_menu li a, #UserWrapper .horizon_menu li .newP  {
     text-decoration: none;
     letter-spacing: 2px;
+    color: #0088CC;
 }
 
 
@@ -412,21 +427,47 @@ form {
     margin: 0 auto;
     width: 90%;
     height: min-content;
-    /*display: none;*/
-    box-sizing: border-box;
-    background-color: #5eb5e0;
+    display: none;
 }
 
-.formNew .holder {
-    width:90%;
+#UserWall .holder {
     margin: 0 auto;
 }
 
-
-#title, #author, #post-text, #file {
-    width:600px;
-    margin-left: 30%;
+#title, #author, #file, #post-text {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+    color: #c5c5c5;
 }
+
+#title, #author {
+
+    border-right:none;
+    border-left:none;
+    border-top: none;
+    background-color: black;
+    border-bottom: 1px solid #66dd66;
+    padding-left: 10px;
+}
+
+#file, #NP {
+
+    color: #66dd66;
+    border: 1px solid #66dd66;
+    background-color: black;
+}
+
+#post-text {
+    background-color: black;
+    border: 1px solid #66dd66;
+    padding-left: 10px;
+}
+
+#title:active, #author:active {
+    border:black;
+}
+
 
 #NP {
     margin-left: 45%;

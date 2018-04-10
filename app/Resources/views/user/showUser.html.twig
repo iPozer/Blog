@@ -27,6 +27,10 @@
                  <img src = "{{ asset('images/avatar.svg') }}">
              </div>
 
+             <div id = "UserName">
+                 <h1>{{ username }}</h1>
+             </div>
+
          </div>
 
          <div class = "horizon_menu">
@@ -34,7 +38,6 @@
                  <li><a href= "#"> Posts</a></li>
                  <li><a href= "#"> Followers</a></li>
                  <li><a href= "#"> Friends</a></li>
-                 <li><a href= "#"> Messages</a></li>
                  <li><span class = "newP"> Add new post </span></li>
              </ul>
          </div>
@@ -44,38 +47,29 @@
 
 
          <div class = "formNew">
-             <form method="post" action="/{username}/new" name="newPost" enctype="multipart/form-data">
+             <form method="post" action="/{username}" name="newPost" enctype="multipart/form-data">
+
                  <div class = "holder">
-                     <label for = "title">Title:<br>
-                         <input type="text" id = "title">
-                     </label>
-                     <br>
+                     <input type="text" id = "title" placeholder="Title of your post...">
                  </div>
+
                  <div class = "holder">
-                     <label for = "author">Author:<br>
-                         <input type="text" id = "author">
-                     </label>
+                     <input type="text" id = "author" placeholder="Author" value = "{{ username }}">
+                 </div>
+
+                 <div class = "holder">
+                     <input type="file" name="file" id="file">
                  </div>
 
                  <input type="hidden" id = "date">
                  <input type="hidden" id = "time">
 
-                 <div class="holder">
-                     <label for="file" >Picture:</label>
-
-                     <input type="file" name="file" id="file">
-
-                 </div>
-                 <br>
                  <div class = "holder">
-                     <label for = "post-text"> Text of the post: <br>
-                         <textarea cols = "40" rows="10"placeholder="Type your post here..." id = "post-text"></textarea>
-                     </label>
+                     <textarea cols = "40" rows="10"placeholder="Type your post here..." id = "post-text"></textarea>
                  </div>
 
-                 <div class = "holder">
-                     <input type = "submit" name = "NewPost" id = "NP" value = "Submit">
-                 </div>
+                 <input type = "submit" name = "NewPost" id = "NP" value = "Submit">
+
 
              </form>
          </div>
