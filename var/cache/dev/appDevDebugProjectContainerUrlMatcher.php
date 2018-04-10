@@ -127,11 +127,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_app_home_show:
 
-        // app_newpost_show
-        if (preg_match('#^/(?P<username>[^/]++)/new$#sD', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_newpost_show')), array (  '_controller' => 'AppBundle\\Controller\\NewPostController::showAction',));
-        }
-
         // app_user_show
         if (preg_match('#^/(?P<username>[^/]++)$#sD', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_user_show')), array (  '_controller' => 'AppBundle\\Controller\\UserController::showAction',));
