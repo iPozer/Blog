@@ -35,12 +35,90 @@
                  <li><a href= "#"> 35 Followers</a></li>
                  <li><a href= "#"> 3 Friends</a></li>
                  <li><a href= "#"> 2 Messages</a></li>
+                 <li><span class = "newP"> Add new post </span></li>
              </ul>
          </div>
      </div>
 
      <div id = "UserWall">
-        <h1> Here will be a posts & feed </h1>
+
+
+         <div class = "formNew">
+             <form method="post" action="/{username}/new" name="newPost" enctype="multipart/form-data">
+                 <div class = "holder">
+                     <label for = "title">Title:<br>
+                         <input type="text" id = "title">
+                     </label>
+                     <br>
+                 </div>
+                 <div class = "holder">
+                     <label for = "author">Author:<br>
+                         <input type="text" id = "author">
+                     </label>
+                 </div>
+
+                 <input type="hidden" id = "date">
+                 <input type="hidden" id = "time">
+
+                 <div class="holder">
+                     <label for="file" >Picture:</label>
+
+                     <input type="file" name="file" id="file">
+
+                 </div>
+                 <br>
+                 <div class = "holder">
+                     <label for = "post-text"> Text of the post: <br>
+                         <textarea cols = "40" rows="10"placeholder="Type your post here..." id = "post-text"></textarea>
+                     </label>
+                 </div>
+
+                 <div class = "holder">
+                     <input type = "submit" name = "NewPost" id = "NP" value = "Submit">
+                 </div>
+
+             </form>
+         </div>
+
+
+
+         {# articles#}
+         <div id = "article">
+             <div class="artTitle">
+                 <h2>Title of article</h2>
+             </div>
+             <div class = "autor">
+                 <span>Author: John Doe</span>
+             </div>
+             <div class="datePubl">
+                 <span>Date: 01/01/2018</span>
+             </div>
+             <div class = "timePubl">
+                 <span>Time: 23:03:44 </span>
+             </div>
+             <div class="picArt">
+                 <img id = "artPic" src="https://getbg.net/upload/full/8/364015_motocikl_krasnyj_motocikly_1920x1200_(www.GetBg.net).jpg" />
+             </div>
+
+             <div class="descriptArt">
+
+                 Here will be a content of news <br>
+                 Here will be a content of news<br>
+                 Here will be a content of news<br>
+                 Here will be a content of news<br>
+
+             </div>
+             <a href="#" id="artMore">Read More</a>
+
+             <div id = "commentsAndViews">
+                 <a id = "comments" href = "#">5 comments </a>
+                 <a id = "views" href = "#">123 views</a>
+             </div>
+         </div>
+
+
+
+
      </div>
  </div>
 
@@ -58,11 +136,32 @@
 
     <div class = "rightMenu">
         <ul>
-            <li><img class = "icons_right" src  = "#"><a href= "#">Feed<img src  = "#" class = "items_values"></a></li>
-            <li><img class = "icons_right" src  = "#"><a href= "#">About Me</a></li>
-            <li><img class = "icons_right" src  = "#"><a href= "#">Friends<img src  = "#" class = "items_values"></a></li>
-            <li><img class = "icons_right" src  = "#"><a href= "#">Messages<img src  = "#" class = "items_values"></a></li>
+            <li><img class = "icons_right" src  = "#"><a href= "#">Feed</a><img src  = "#" class = "items_values"></li>
+            <li><img class = "icons_right" src  = "#"><a href= "#">About Me</a><img src  = "#" class = "items_values"></li>
+            <li><img class = "icons_right" src  = "#"><a href= "#">Friends</a><img src  = "#" class = "items_values"></li>
+            <li><img class = "icons_right" src  = "#"><a href= "#">Messages</a><img src  = "#" class = "items_values"></li>
         </ul>
     </div>
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+
+        $(function (){
+            $('.newP').click(function (){
+                $(this).toggleClass('active');
+                $('.formNew').slideToggle();
+            });
+
+        });
+    </script>
+
 
 {% endblock %}

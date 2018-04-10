@@ -271,26 +271,7 @@ form {
 }
 
 
-/*--------------------New Post--------------------------*/
 
-#formNew {
-    margin: 0 auto;
-    width: 90%;
-}
-
-.holder {
-    width:90%;
-    margin: 10px auto;
-}
-
-#title, #author, #post-text, #file {
-    width:400px;
-    margin-left: 30%;
-}
-
-#NP {
-    margin-left: 45%;
-}
 
 /*----------------------------User Account-----------------------------*/
 
@@ -347,16 +328,17 @@ form {
     top: 65%;
 }
 #UserWrapper .horizon_menu {
-    background-color: #66dd66;
-    border: 3px solid rgba(94, 181, 224, 1);
+
+    border: 3px solid #6b9311;
     margin: 0 auto;
     width: 90%;
     height: 50px;
 }
 
 #UserWrapper .horizon_menu li {
-    display: inline-flex;
+    display:inline-flex;
     flex-wrap: nowrap;
+    line-height: 10px;
     margin: 2%;
     text-transform: uppercase;
 }
@@ -367,17 +349,19 @@ form {
 
 #UserWrapper .horizon_menu li a {
     text-decoration: none;
-    text-shadow: 1px 1px 4px #99CDD8;
     letter-spacing: 2px;
-    color: black;
 }
 
-#UserWall {
-    background-color: rgba(27%, 27%, 27%, 0.5);
-    width: 90%;
-    height: 100%;
-    overflow: auto;
-    margin: 10px auto;
+#UserWrapper .horizon_menu li .newP {
+    padding: 0 10px;
+    float: left;
+    text-align: center;
+    /**/
+    /*color: #0088CC;*/
+}
+
+#UserWrapper .horizon_menu li .newP:hover {
+    color: forestgreen;
 }
 
 
@@ -416,9 +400,49 @@ form {
       margin-left: 30px;
   }
 
-.rightMenu ul li:hover {
+.rightMenu ul li a:hover {
     border: 1px solid #0088CC;
 }
+
+/*-----------------------------Wall-----------------------------*/
+
+#UserWall {
+    border: 2px solid rgba(27%, 27%, 27%, 0.5);
+    width: 90%;
+    height: 100%;
+    overflow: auto;
+    margin: 10px auto;
+}
+
+
+
+/*--------------------New Post--------------------------*/
+
+
+#UserWall .formNew {
+    margin: 0 auto;
+    width: 90%;
+    height: min-content;
+    display: none;
+    box-sizing: border-box;
+}
+
+.formNew .holder {
+    width:90%;
+    margin: 0 auto;
+}
+
+
+#title, #author, #post-text, #file {
+    width:600px;
+    margin-left: 30%;
+}
+
+#NP {
+    margin-left: 45%;
+}
+
+
 
 
 
