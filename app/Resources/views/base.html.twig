@@ -9,6 +9,8 @@
             <link rel='stylesheet' href= "{{ asset('css/basic-template.css')}}">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+
     </head>
     <body>
 
@@ -88,7 +90,26 @@
 
 
                             <div class = "comments">
-                                <span> Write your comments here..</span>
+                                <span id = "comments" style = "margin-top: 5px; ">1 comments </span>
+                                <span id = "views" style = "margin-top: 5px;">123 views</span>
+
+                                <div id = "userNameLink">
+                                    <img src = "#" id = "avatar_min">
+                                    <input type = "text" id = "write_your_comment" placeholder="Write your comment..." title = "Unregistered users can't comment!">  {#make it resizible by jquery#}
+                                     <input type = "submit" value = "Comment">
+                                </div>
+                                <div class = "comments" style = "background-color: #FFFFFF; ">
+                                    <div id = "userNameLink">
+                                        <img src = "#" id = "avatar_min">
+                                        <span id = "com"> Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. </span>
+                                        <span id = "time_com"> Time: 00:46:08</span>
+                                        <span id= "reply_on"> Reply </span>
+                                    </div>
+
+                                </div>
+
+
+
                             </div>
 
                     </div>
