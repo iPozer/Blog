@@ -225,27 +225,43 @@ form {
     border-top: 1px solid rgba(68, 68, 68, 0.5);
     border-bottom: 1px solid rgba(68, 68, 68, 0.5);
     width:90%;
-    height: 700px;
+    height: 600px;
     margin:10px auto;
+
 
 }
 
-artTitle, .autor, .datePubl, .timePubl, .picArt, .descriptArt {
-    margin: 0 10px;
+artTitle, .autor, .datePubl, .timePubl{
+    margin: 10px;
     color: #c5c5c5;
+    display: inline-block;
 }
 
 .artTitle {
-    background-color: #5eb5e0;
+    height: min-content;
+    background-color: rgba(36, 36, 36, 0.5);
+    margin: 0 10px;
+
 }
 .artTitle h2 {
     text-align: center;
-    color: #FFFFFF;
+    color: #5eb5e0;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.autor {
+    margin-right: 10%;
+    float: left;
+}
+
+.timePubl  {
+    float: right;
 }
 
 .picArt {
-    width:100%;
-    height:60%;
+    width: 90%;
+    height:70%;
     margin: 0 auto;
 }
 
@@ -256,28 +272,17 @@ artTitle, .autor, .datePubl, .timePubl, .picArt, .descriptArt {
     margin: 0 auto;
 }
 
-.descriptArt {
-
-    width: 100%;
-    height: 10%;
-    margin: 5px auto;
-    overflow: auto;
-}
-.descriptArt span {
-    width: 100%;
-    height: 100%;
-}
-
 
 #artMore {
     display: block;
-    height: 30px;
+    height: 40px;
     border:1px solid rgba(209, 201, 201, 0.5);
     color: #FFFFFF;
     text-align: center;
     margin:10px;
     text-decoration: none;
 }
+
 
 
 #comments, #views {
@@ -303,14 +308,13 @@ artTitle, .autor, .datePubl, .timePubl, .picArt, .descriptArt {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(68, 68, 68, 0.1);
+    background: rgba(68, 68, 68, 0.5);
     z-index: 99999;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     display: none;
     pointer-events: none;
-    overflow: auto;
 }
 
 .modalDialog:target {
@@ -327,7 +331,7 @@ artTitle, .autor, .datePubl, .timePubl, .picArt, .descriptArt {
     padding: 5px 20px 13px 20px;
     background: #dfdfdf;
     border: 1px solid grey;
-    overflow: auto;
+
 }
 
 .close {
@@ -358,10 +362,9 @@ artTitle, .autor, .datePubl, .timePubl, .picArt, .descriptArt {
     border-top: 1px solid rgba(68, 68, 68, 0.5);
     border-bottom: 1px solid rgba(68, 68, 68, 0.5);
     width:90%;
-    height: min-content;
+    height: 600px;
     margin:10px auto;
-
-
+    overflow: auto;
 }
 
 artTitle2, .autor2, .datePubl2, .timePubl2, .picArt2, .descriptArt2 {
