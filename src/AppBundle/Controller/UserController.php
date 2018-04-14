@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Response;
 class UserController extends Controller
 {
     /**
-     * @Route("/{username}")
+     * @Route("/{username}", name = "VA_blog_userpage")
      */
 
     public function showAction($username)

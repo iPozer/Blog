@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Response;
 class AboutController extends Controller
 {
     /**
-     * @Route("/about")
+     * @Route("/about", name = "VA_blog_about")
      */
     public function showAction()
     {
