@@ -23,10 +23,29 @@ class HomeController extends Controller
      */
     public function showAction()
     {
+        $em = $this->getDoctrine()->getManager();
+        $posts = $em->getRepository('AppBundle:Posts')->findAll();
+//        dump($posts); die;
 
+        return $this->render('home/show.html.twig', [
+            'posts'=>$posts
+        ]);
 
-        return $this->render('home/show.html.twig');
+    }
 
+    /**
+     * @Route("/{id}", name = "VA_blog_post")
+     */
+    public function showPostAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $posts = $em->getRepository('AppBundle:Posts')->findAll();
+//        dump($posts); die;
+
+        return $this->render('home/showPost.html.twig', [
+            'id'=>$id,
+            'posts'=>$posts
+        ]);
     }
 
     public function loginAction()
@@ -36,28 +55,24 @@ class HomeController extends Controller
 
 
     /**
-     * @Route("/")
-     * @Method("POST")
+     * @Route("/new")
      */
 
     public function registerAction()
     {
         //здесь будет запрос на добавление пользователя, проверка куки и сессии и т.д.
 
-        if (isset($POST['reg'])) {
+
             $users = new Users();
-            $users->setName('John');
-            $users->setLogin('JDoe');
-            $users->setGender('M');
-            $users->setBday('25-06-1985');
-            $users->setPassword('djhje438');
+            $users->setName('Mary');
+            $users->setLogin('MMM45');
+            $users->setGender('F');
+            $users->setBday('08-04-1979');
+            $users->setPassword('fjekrt');
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($users);
             $em->flush();
-        }
-
-
 
 
 
