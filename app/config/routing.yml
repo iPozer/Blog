@@ -4,3 +4,18 @@ app:
 
 
 
+VA_blog_post:
+    path:  /{id}
+    defaults: { _controller: "AppBundle:Home:showPost" }
+    requirements:
+        methods:  GET
+        id: \d+
+
+
+
+VA_blog_userpage:
+    path:  /{username}
+    defaults: { _controller: "AppBundle:User:show" }
+    requirements:
+        methods:  GET
+        
