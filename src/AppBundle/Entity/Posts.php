@@ -163,6 +163,29 @@ class Posts
 
 
     /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Users")
+     */
+    private $user;
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser(Users $user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+
+
+    /**
      * @ORM\Column(type="string", nullable=true)
      */
     private $comments;

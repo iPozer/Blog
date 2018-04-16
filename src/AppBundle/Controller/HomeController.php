@@ -71,8 +71,18 @@ class HomeController extends Controller
             $users->setBday('08-04-1979');
             $users->setPassword('fjekrt');
 
+        $posts = new Posts();
+
+                $posts->setTitle('About us');
+                $posts->setAuthor('Lenny Welsh');
+                $posts->setSubject("Lorem ipsum sic transic gloria mundi");
+                $posts->setCreatedDate( new \DateTime("-1 month"));
+                $posts->setCreatedTime('15:44:12');
+                $posts->setUser($users);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($users);
+            $em->persist($posts);
             $em->flush();
 
 
