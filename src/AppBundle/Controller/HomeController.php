@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $posts = $em->getRepository('AppBundle:Posts')->findAll();
-//        dump($posts); die;
+//        dump($em->getRepository('AppBundle:Posts'));
 
         return $this->render('home/show.html.twig', [
             'posts'=>$posts
@@ -41,7 +41,7 @@ class HomeController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $posts = $em->getRepository('AppBundle:Posts')->findAll();
-//        dump($posts); die;
+//        dump();
 
         return $this->render('home/showPost.html.twig', [
             'id'=>$id,
