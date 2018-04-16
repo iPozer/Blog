@@ -6,7 +6,7 @@
     {% block stylesheets %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel='stylesheet' href= "{{ asset('css/basic-template.css')}}">
-        <linl rel="stylesheet" href = "{{ asset('css/home-template.css')}}">
+        <link rel="stylesheet" href = "{{ asset('css/home-template.css')}}">
 
     {% endblock %}
 
@@ -18,9 +18,13 @@
             {% block sidebar %}
             <br>
 
+
+
         <div id="accordion">
             <div class="menu">Log In</div>
             <div class = "formWrapper">
+
+                {{ dump(params) }}
 
                 <form action="/" name = "Enter" method = "post">
 
@@ -36,10 +40,16 @@
 
 
 
-            <div class="menu">Register</div>
+            <div class="menu"><a href = " {{ path('VA_blog_newUser') }}">Register</a> </div>
 
             <div class="formWrapper">
-                <form action="/" name="Registration" method="post">
+
+
+
+
+
+                {{ dump(params) }}
+                <form action="/new" name="Registration" method="post">
 
                     <input type="text" name="UserName" required placeholder="Name">
                     <input type="text" name="UserLogin" required placeholder="Login"><br>
@@ -60,12 +70,14 @@
                     </div>
 
                     <input type="date" name="date">
-                    <input type="password" name="pswd" required placeholder="Think up password">
-                    <input type="password" name="pswd_confirm" required placeholder="Confirm password"><br>
+                    <input type="password" name="pswd" required placeholder="Think up password"><br>
+                    {#<input type="password" name="pswd_confirm" required placeholder="Confirm password"><br>#}
                     <input type="submit" name="reg" value="Register" class = "rg-btn">
 
 
                 </form>
+
+
             </div>
         </div>
 

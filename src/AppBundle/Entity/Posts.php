@@ -163,7 +163,7 @@ class Posts
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Users")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Users", inversedBy="posts")
      */
     private $user;
 

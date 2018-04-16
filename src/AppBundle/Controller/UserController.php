@@ -32,6 +32,11 @@ class UserController extends Controller
     }
 
 
+    public function addNewPost()
+    {
+
+    }
+
 
 
 

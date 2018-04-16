@@ -3,6 +3,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 
@@ -125,5 +126,25 @@ class Users
      * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Posts", mappedBy="user")
+     */
+    private $posts;
+
+    public function __construct()
+    {
+        $this->posts = new ArrayCollection();
+    }
+
+    /**
+     * @return ArrayCollection|posts[]
+     */
+    public function getPosts()
+    {
+        return $this->posts;
+    }
+
+
 
 }
