@@ -85,7 +85,7 @@
                             <span>Date: {{ post.createdDate|date('d-m-Y') }}</span>
                         </div>
                         <div class = "timePubl">
-                            <span>Time: {{ post.createdTime }} </span>
+                            <span>Time: {{ post.createdTime|date('H:i:s') }} </span>
                         </div>
                         <div class="picArt">
                             <img id = "artPic" src="{{ asset('images/364015_motocikl_krasnyj_motocikly_1920x1200_(www.GetBg.net).jpg') }}" />
