@@ -27,12 +27,11 @@ class HomeController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $posts = $em->getRepository('AppBundle:Posts')->findAll();
-        $params = 0;
+
 
 
         return $this->render('home/show.html.twig', [
-            'posts'=>$posts,
-            'params' => $params
+            'posts'=>$posts
         ]);
 
     }
