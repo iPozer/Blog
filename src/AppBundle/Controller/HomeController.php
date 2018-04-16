@@ -14,6 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use AppBundle\Entity\Users;
+use AppBundle\Entity\Posts;
 
 
 class HomeController extends Controller
@@ -60,7 +61,7 @@ class HomeController extends Controller
 
     public function registerAction()
     {
-        //здесь будет запрос на добавление пользователя, проверка куки и сессии и т.д.
+
 
 
             $users = new Users();
