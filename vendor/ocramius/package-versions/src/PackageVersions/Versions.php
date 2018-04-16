@@ -57,9 +57,14 @@ final class Versions
   'twig/twig' => 'v1.35.3@b48680b6eb7d16b5025b9bfc4108d86f6b8af86f',
   'zendframework/zend-code' => '3.1.0@2899c17f83a7207f2d7f53ec2f421204d3beea27',
   'zendframework/zend-eventmanager' => '3.2.0@9d72db10ceb6e42fb92350c0cb54460da61bd79c',
+  'doctrine/data-fixtures' => 'v1.2.2@17fa5bfe6ff52e35cb3d9ec37c934a2f4bd1fa2e',
+  'doctrine/doctrine-fixtures-bundle' => '3.0.2@7fc29d2b18c61ed99826b21fbfd1ff9969cc2e7f',
+  'fzaninotto/faker' => 'v1.7.1@d3ed4cc37051c1ca52d22d76b437d14809fc7e0d',
+  'myclabs/deep-copy' => '1.7.0@3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e',
+  'nelmio/alice' => 'v3.1.3@ad305e80873c847967dd2dec049c533d848f5159',
   'sensio/generator-bundle' => 'v3.1.7@28cbaa244bd0816fd8908b93f90380bcd7b67a65',
   'symfony/phpunit-bridge' => 'v3.4.7@e4b72beb8961340764367a804f21044e83fc19a8',
-  'valeria/blog' => '1.9999999.9999999.9999999-dev@6ad8931d1e811b0a89520e4458ef4285f477e613',
+  'valeria/blog' => '1.9999999.9999999.9999999-dev@1865717c9db9b369656775e7f608a35ec4c1d146',
 );
 
     private function __construct()
