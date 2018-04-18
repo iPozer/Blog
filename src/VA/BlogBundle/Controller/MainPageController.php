@@ -12,6 +12,7 @@ class MainPageController extends Controller
 {
     /**
      * @Route("/", name = "VA_blog_mainpage")
+     * @Method("GET")
      */
     public function indexAction()
     {
