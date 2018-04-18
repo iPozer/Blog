@@ -16,6 +16,7 @@
       <parameter key="SwiftmailerBundle">Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
+      <parameter key="VABlogBundle">VA\BlogBundle\VABlogBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -57,6 +58,11 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">/home/valeria/projects/Blog/vendor/sensio/framework-extra-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
+      </parameter>
+      <parameter key="VABlogBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">/home/valeria/projects/Blog/src/VA/BlogBundle</parameter>
+        <parameter key="namespace">VA\BlogBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -2655,6 +2661,14 @@
       <call method="addPath">
         <argument>/home/valeria/projects/Blog/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
+      </call>
+      <call method="addPath">
+        <argument>/home/valeria/projects/Blog/src/VA/BlogBundle/Resources/views</argument>
+        <argument>VABlog</argument>
+      </call>
+      <call method="addPath">
+        <argument>/home/valeria/projects/Blog/src/VA/BlogBundle/Resources/views</argument>
+        <argument>!VABlog</argument>
       </call>
       <call method="addPath">
         <argument>/home/valeria/projects/Blog/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
