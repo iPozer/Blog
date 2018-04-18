@@ -1,0 +1,45 @@
+
+{% extends 'layout.html.twig' %}
+
+    {% block title %}Home{% endblock %}
+
+
+
+
+    {% block body %}
+
+                <div id = "article">
+
+                        <div class="artTitle">
+                            <h2>Title</h2>
+                        </div>
+                        <div class = "autor">
+                            <span>Author: Author </span>
+                        </div>
+                        <div class="datePubl">
+                            <span>Date: Date </span>
+                        </div>
+                        <div class = "timePubl">
+                            <span>Time: Time </span>
+                        </div>
+                        <div class="picArt">
+                            <img id = "artPic" src="{{ asset('images/364015_motocikl_krasnyj_motocikly_1920x1200_(www.GetBg.net).jpg') }}" />
+                        </div>
+
+
+                        <a id="artMore" href="/post{id}">Read More</a>
+
+                        <div id = "commentsAndViews">
+                            <span id = "comments">5 comments </span>
+                            <span id = "views">123 views</span>
+                        </div>
+
+
+                </div>
+
+    {% endblock %}
+
+
+
+
+
