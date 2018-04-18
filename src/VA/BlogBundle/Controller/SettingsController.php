@@ -8,13 +8,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
-class AboutController extends Controller
+class SettingsController extends Controller
 {
     /**
-     * @Route("/about", name = "VA_blog_about")
+     * @Route("/settings", name = "VA_blog_settings")
      */
     public function indexAction()
     {
-        return $this->render('About/about.html.twig');
+        return $this->render('Settings/settings.html.twig');
     }
 }
