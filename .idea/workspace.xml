@@ -2,40 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3f69e01-0274-468a-9fca-0cc7704f21ac" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/AppBundle.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/2/6/CRI7S1AjyPr9MstQbuuI" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/2/6/CRI7S1AjyPr9MstQbuuI" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/3/1/M2m-0cV9jZG61T-4qO65" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/3/1/M2m-0cV9jZG61T-4qO65" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/B/+/DTjt6S0keIlNWmYpHj3U" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/B/+/DTjt6S0keIlNWmYpHj3U" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/E/W/GGgYe2GX7Z9Se2D3Pnjm" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/E/W/GGgYe2GX7Z9Se2D3Pnjm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/F/3/eO7rn8-v2LHpyDVQeF4k" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/F/3/eO7rn8-v2LHpyDVQeF4k" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/F/G/HXiZN7t62K9FlrXj290R" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/F/G/HXiZN7t62K9FlrXj290R" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/F/J/+Q+taUZB7Y1g87kUpNRV" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/F/J/+Q+taUZB7Y1g87kUpNRV" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/F/O/AQIj6CQoXHaBmuPB8zrF" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/F/O/AQIj6CQoXHaBmuPB8zrF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/H/D/NqBojvGVHnEnyEE07sol" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/H/D/NqBojvGVHnEnyEE07sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/J/M/0tQ1C1VRDG2VUn-4-qD2" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/J/M/0tQ1C1VRDG2VUn-4-qD2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/K/L/XBB0geO2PKhpV9a78uuh" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/K/L/XBB0geO2PKhpV9a78uuh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/L/R/r0UuURYyqcRn-7OfB58S" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/L/R/r0UuURYyqcRn-7OfB58S" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/M/H/1Dj3H3J4bf42D7jNoeVX" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/M/H/1Dj3H3J4bf42D7jNoeVX" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/M/L/G0qJtvpAj7ZcDf1JmCFG" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/M/L/G0qJtvpAj7ZcDf1JmCFG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/M/V/vGlvwRqZjblYab4340hj" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/M/V/vGlvwRqZjblYab4340hj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/O/Q/wiB8S3SuPm-bRYCAHF0N" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/O/Q/wiB8S3SuPm-bRYCAHF0N" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/O/U/eNTMjsffFt-O21iX0AV7" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/O/U/eNTMjsffFt-O21iX0AV7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/Q/W/NKnhDgq9-yJm8R0NE9jU" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/Q/W/NKnhDgq9-yJm8R0NE9jU" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/R/G/TpDi3Bw1UkYNV3ra-p5a" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/R/G/TpDi3Bw1UkYNV3ra-p5a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/R/J/c6R5Ak5h39NbxQ8NaAiG" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/R/J/c6R5Ak5h39NbxQ8NaAiG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/S/G/+72qC3WRspDeTTuyQb0e" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/S/G/+72qC3WRspDeTTuyQb0e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/S/S/MaCSgf5x+ywuoVKrzfE4" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/S/S/MaCSgf5x+ywuoVKrzfE4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/T/+/3NAWAwhbPdFEYojHaTWk" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/T/+/3NAWAwhbPdFEYojHaTWk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/T/2/GD+9hxlV-uV4+kkHyLum" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/T/2/GD+9hxlV-uV4+kkHyLum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/V/R/FkiyOA9zBhvw63pEzMul" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/V/R/FkiyOA9zBhvw63pEzMul" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/X/9/3LM9kqUW9zOl6M700mU9" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/X/9/3LM9kqUW9zOl6M700mU9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/Z/C/hXtFH64TyKQYYXoOUsE0" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/vZR5K5NGfZ/Z/C/hXtFH64TyKQYYXoOUsE0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,34 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="44" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="25" column="65" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="25" selection-end-column="65" />
+            <state relative-caret-position="105">
+              <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -172,7 +119,7 @@
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="405" />
     <option name="width" value="1259" />
     <option name="height" value="596" />
@@ -200,6 +147,12 @@
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -213,19 +166,6 @@
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="VA" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="VA" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -278,7 +218,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40490000" />
+    <option name="totallyTimeSpent" value="40643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="405" width="1259" height="596" extended-state="0" />
@@ -346,6 +286,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" />
     <entry file="file://$PROJECT_DIR$/app/Resources/views/home/show.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MainPage.php" />
@@ -411,13 +358,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Brand/templates/Register.php" />
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/about/about.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AboutController.php" />
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HomeController.php" />
@@ -442,20 +382,27 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/home/show.html.twig" />
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#7#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="25" column="65" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="25" selection-end-column="65" />
+        <state relative-caret-position="241">
+          <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="44" />
+        <state relative-caret-position="105">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
         </state>
       </provider>
     </entry>
