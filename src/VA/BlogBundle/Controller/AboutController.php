@@ -8,15 +8,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
-class MainPageController extends Controller
+class AboutController extends Controller
 {
     /**
-     * @Route("/", name = "VA_blog_mainpage")
+     * @Route("/about", name = "VA_blog_about")
      */
-    public function indexAction()
+    public function showAction()
     {
-        return $this->render('Home/index.html.twig');
+        return $this->render('About/about.html.twig');
     }
-
-
 }
