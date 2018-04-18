@@ -1,3 +1,7 @@
-var/cache/*
-var/cache/dev/*
-var/logs/
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
