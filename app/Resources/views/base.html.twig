@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>VA BLOG  {% block title %}{% endblock %} || </title>
+
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <link rel='stylesheet' href= "{{ asset('css/basic-template.css')}}">
+        {% endblock %}
+
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+
+    </head>
+    <body>
+
+    <div id="wrapper">
+
+        <aside id="left">
+
+            <div id = "search"><input type = "search" placeholder="search"></div><br>
+
+
+
+            <div id = "NameAndLogo">
+                <div id = "Logo">VA</div>
+                <h1>Blog</h1>
+            </div>
+
+                <nav class = "mainNav">
+                        <ul class="navigation">
+                            <li><a href="{{ path('/') }}">Home</a></li>
+                            <li><a href="{{ path('/about') }}">About</a></li>
+                            <li> <a href = "#">Settings</a></li>
+                        </ul>
+                        <div class = "copyright">Created by <a href="https://github.com/Leratony">Leratony</a></div>
+                </nav>
+
+                <div id = "mySocial">
+                    <ul>
+                        <li><a href = "https://www.facebook.com/Valeria-Antnva-2119521821628416/"><img src ="images/facebook.png"></a></li>
+                        <li><a href = "https://twitter.com/EvaAntonevich"><img src ="images/twitter.png"></a></li>
+                        <li><a href = "https://www.instagram.com/antonia.v1/"><img src ="images/instagram.png"></a></li>
+                        <li><a href = "https://plus.google.com/u/0/108193004433897722654"><img src ="images/google.png"></a></li>
+                    </ul>
+                </div>
+
+        </aside>
+
+        <main>
+
+            {% block body %}
+            {% endblock %}
+
+        </main>
+
+
+        <aside id="right">
+
+
+            <div id = "userStatus">
+
+                {% block user %}
+                {% endblock %}
+
+            </div>
+
+            {% block sidebar %}
+            {% endblock %}
+
+        </aside>
+        
+    </div>
+
+
+
+        {% block javascripts %}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        {% endblock %}
+
+
+    </body>
+</html>
