@@ -1,4 +1,4 @@
-<?php
+composer require doctrine/doctrine-migrations-bundle<?php
 
 namespace VA\BlogBundle\Entity;
 
