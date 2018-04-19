@@ -1,0 +1,66 @@
+<?php
+
+namespace VA\BlogBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass="VA\BlogBundle\Entity\Repository\UserRepository")
+ * @ORM\Table(name="user")
+ * @ORM\HasLifecycleCallbacks()
+ */
+class User
+{
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(type="integer")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $user_name;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $user_login;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    protected $user_bday;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $user_password;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $cover_image;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $avatar_image;
+
+
+
+    protected $post;
+
+
+    protected $comments;
+
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $slug;
+
+}
+
+

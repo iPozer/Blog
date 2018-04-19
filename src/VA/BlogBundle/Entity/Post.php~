@@ -1,0 +1,73 @@
+<?php
+
+namespace VA\BlogBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass="VA\BlogBundle\Entity\Repository\PostRepository")
+ * @ORM\Table(name="post")
+ * @ORM\HasLifecycleCallbacks()
+ */
+class Post
+{
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(type="integer")
+     */
+
+    protected $id;
+
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $title;
+
+
+
+    protected $author;
+
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    protected $post;
+
+
+
+    protected $comments;
+
+
+    /**
+     * @ORM\Column(type="string", length=20)
+     */
+    protected $image;
+
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $tags;
+
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $created_at;
+
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $updated_at;
+
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $slug;
+
+
+}

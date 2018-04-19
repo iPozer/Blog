@@ -5,8 +5,9 @@ namespace VA\BlogBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="VA\BlogBundle\Entity\Repository\UserRepository")
  * @ORM\Table(name="user")
+ * @ORM\HasLifecycleCallbacks()
  */
 class User
 {
@@ -48,15 +49,10 @@ class User
     protected $avatar_image;
 
 
-    /**
-     * @ORM\Column(type="text")
-     */
+
     protected $post;
 
 
-    /**
-     * @ORM\Column(type="string")
-     */
     protected $comments;
 
 
@@ -66,12 +62,10 @@ class User
     protected $slug;
 
 
-
-
-
-    
     /**
-     * @return mixed
+     * Get id
+     *
+     * @return integer
      */
     public function getId()
     {
@@ -79,15 +73,23 @@ class User
     }
 
     /**
-     * @param mixed $id
+     * Set userName
+     *
+     * @param string $userName
+     *
+     * @return User
      */
-    public function setId($id)
+    public function setUserName($userName)
     {
-        $this->id = $id;
+        $this->user_name = $userName;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get userName
+     *
+     * @return string
      */
     public function getUserName()
     {
@@ -95,15 +97,23 @@ class User
     }
 
     /**
-     * @param mixed $user_name
+     * Set userLogin
+     *
+     * @param string $userLogin
+     *
+     * @return User
      */
-    public function setUserName($user_name)
+    public function setUserLogin($userLogin)
     {
-        $this->user_name = $user_name;
+        $this->user_login = $userLogin;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get userLogin
+     *
+     * @return string
      */
     public function getUserLogin()
     {
@@ -111,15 +121,23 @@ class User
     }
 
     /**
-     * @param mixed $user_login
+     * Set userBday
+     *
+     * @param \DateTime $userBday
+     *
+     * @return User
      */
-    public function setUserLogin($user_login)
+    public function setUserBday($userBday)
     {
-        $this->user_login = $user_login;
+        $this->user_bday = $userBday;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get userBday
+     *
+     * @return \DateTime
      */
     public function getUserBday()
     {
@@ -127,15 +145,23 @@ class User
     }
 
     /**
-     * @param mixed $user_bday
+     * Set userPassword
+     *
+     * @param string $userPassword
+     *
+     * @return User
      */
-    public function setUserBday($user_bday)
+    public function setUserPassword($userPassword)
     {
-        $this->user_bday = $user_bday;
+        $this->user_password = $userPassword;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get userPassword
+     *
+     * @return string
      */
     public function getUserPassword()
     {
@@ -143,15 +169,23 @@ class User
     }
 
     /**
-     * @param mixed $user_password
+     * Set coverImage
+     *
+     * @param string $coverImage
+     *
+     * @return User
      */
-    public function setUserPassword($user_password)
+    public function setCoverImage($coverImage)
     {
-        $this->user_password = $user_password;
+        $this->cover_image = $coverImage;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get coverImage
+     *
+     * @return string
      */
     public function getCoverImage()
     {
@@ -159,15 +193,23 @@ class User
     }
 
     /**
-     * @param mixed $cover_image
+     * Set avatarImage
+     *
+     * @param string $avatarImage
+     *
+     * @return User
      */
-    public function setCoverImage($cover_image)
+    public function setAvatarImage($avatarImage)
     {
-        $this->cover_image = $cover_image;
+        $this->avatar_image = $avatarImage;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get avatarImage
+     *
+     * @return string
      */
     public function getAvatarImage()
     {
@@ -175,61 +217,26 @@ class User
     }
 
     /**
-     * @param mixed $avatar_image
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return User
      */
-    public function setAvatarImage($avatar_image)
+    public function setSlug($slug)
     {
-        $this->avatar_image = $avatar_image;
+        $this->slug = $slug;
+
+        return $this;
     }
 
     /**
-     * @return mixed
-     */
-    public function getPost()
-    {
-        return $this->post;
-    }
-
-    /**
-     * @param mixed $post
-     */
-    public function setPost($post)
-    {
-        $this->post = $post;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getComments()
-    {
-        return $this->comments;
-    }
-
-    /**
-     * @param mixed $comments
-     */
-    public function setComments($comments)
-    {
-        $this->comments = $comments;
-    }
-
-    /**
-     * @return mixed
+     * Get slug
+     *
+     * @return string
      */
     public function getSlug()
     {
         return $this->slug;
     }
-
-    /**
-     * @param mixed $slug
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
-    }
-
 }
-
-

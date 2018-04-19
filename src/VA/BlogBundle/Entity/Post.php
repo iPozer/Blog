@@ -5,8 +5,9 @@ namespace VA\BlogBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="VA\BlogBundle\Entity\Repository\PostRepository")
  * @ORM\Table(name="post")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Post
 {
@@ -25,9 +26,7 @@ class Post
     protected $title;
 
 
-    /**
-     * @ORM\Column(type="string", length=100)
-     */
+
     protected $author;
 
 
@@ -37,9 +36,7 @@ class Post
     protected $post;
 
 
-    /**
-     * @ORM\Column(type="string")
-     */
+
     protected $comments;
 
 
@@ -74,10 +71,10 @@ class Post
 
 
 
-    
-
     /**
-     * @return mixed
+     * Get id
+     *
+     * @return integer
      */
     public function getId()
     {
@@ -85,15 +82,23 @@ class Post
     }
 
     /**
-     * @param mixed $id
+     * Set title
+     *
+     * @param string $title
+     *
+     * @return Post
      */
-    public function setId($id)
+    public function setTitle($title)
     {
-        $this->id = $id;
+        $this->title = $title;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get title
+     *
+     * @return string
      */
     public function getTitle()
     {
@@ -101,31 +106,23 @@ class Post
     }
 
     /**
-     * @param mixed $title
+     * Set post
+     *
+     * @param string $post
+     *
+     * @return Post
      */
-    public function setTitle($title)
+    public function setPost($post)
     {
-        $this->title = $title;
+        $this->post = $post;
+
+        return $this;
     }
 
     /**
-     * @return mixed
-     */
-    public function getAuthor()
-    {
-        return $this->author;
-    }
-
-    /**
-     * @param mixed $author
-     */
-    public function setAuthor($author)
-    {
-        $this->author = $author;
-    }
-
-    /**
-     * @return mixed
+     * Get post
+     *
+     * @return string
      */
     public function getPost()
     {
@@ -133,31 +130,23 @@ class Post
     }
 
     /**
-     * @param mixed $post
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Post
      */
-    public function setPost($post)
+    public function setImage($image)
     {
-        $this->post = $post;
+        $this->image = $image;
+
+        return $this;
     }
 
     /**
-     * @return mixed
-     */
-    public function getComments()
-    {
-        return $this->comments;
-    }
-
-    /**
-     * @param mixed $comments
-     */
-    public function setComments($comments)
-    {
-        $this->comments = $comments;
-    }
-
-    /**
-     * @return mixed
+     * Get image
+     *
+     * @return string
      */
     public function getImage()
     {
@@ -165,15 +154,23 @@ class Post
     }
 
     /**
-     * @param mixed $image
+     * Set tags
+     *
+     * @param string $tags
+     *
+     * @return Post
      */
-    public function setImage($image)
+    public function setTags($tags)
     {
-        $this->image = $image;
+        $this->tags = $tags;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get tags
+     *
+     * @return string
      */
     public function getTags()
     {
@@ -181,15 +178,23 @@ class Post
     }
 
     /**
-     * @param mixed $tags
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return Post
      */
-    public function setTags($tags)
+    public function setCreatedAt($createdAt)
     {
-        $this->tags = $tags;
+        $this->created_at = $createdAt;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get createdAt
+     *
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -197,15 +202,23 @@ class Post
     }
 
     /**
-     * @param mixed $created_at
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @return Post
      */
-    public function setCreatedAt($created_at)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->created_at = $created_at;
+        $this->updated_at = $updatedAt;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get updatedAt
+     *
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -213,29 +226,26 @@ class Post
     }
 
     /**
-     * @param mixed $updated_at
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Post
      */
-    public function setUpdatedAt($updated_at)
+    public function setSlug($slug)
     {
-        $this->updated_at = $updated_at;
+        $this->slug = $slug;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get slug
+     *
+     * @return string
      */
     public function getSlug()
     {
         return $this->slug;
     }
-
-    /**
-     * @param mixed $slug
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
-    }
-
-
-
 }

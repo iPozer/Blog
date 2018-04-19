@@ -5,8 +5,9 @@ namespace VA\BlogBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="VA\BlogBundle\Entity\Repository\CommentsRepository")
  * @ORM\Table(name="comments")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Comments
 {
@@ -48,10 +49,14 @@ class Comments
     protected $updated_at;
 
 
-    
+
+
+
 
     /**
-     * @return mixed
+     * Get id
+     *
+     * @return integer
      */
     public function getId()
     {
@@ -59,7 +64,23 @@ class Comments
     }
 
     /**
-     * @return mixed
+     * Set author
+     *
+     * @param string $author
+     *
+     * @return Comments
+     */
+    public function setAuthor($author)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return string
      */
     public function getAuthor()
     {
@@ -67,7 +88,23 @@ class Comments
     }
 
     /**
-     * @return mixed
+     * Set post
+     *
+     * @param string $post
+     *
+     * @return Comments
+     */
+    public function setPost($post)
+    {
+        $this->post = $post;
+
+        return $this;
+    }
+
+    /**
+     * Get post
+     *
+     * @return string
      */
     public function getPost()
     {
@@ -75,7 +112,23 @@ class Comments
     }
 
     /**
-     * @return mixed
+     * Set comment
+     *
+     * @param string $comment
+     *
+     * @return Comments
+     */
+    public function setComment($comment)
+    {
+        $this->comment = $comment;
+
+        return $this;
+    }
+
+    /**
+     * Get comment
+     *
+     * @return string
      */
     public function getComment()
     {
@@ -83,7 +136,23 @@ class Comments
     }
 
     /**
-     * @return mixed
+     * Set approved
+     *
+     * @param boolean $approved
+     *
+     * @return Comments
+     */
+    public function setApproved($approved)
+    {
+        $this->approved = $approved;
+
+        return $this;
+    }
+
+    /**
+     * Get approved
+     *
+     * @return boolean
      */
     public function getApproved()
     {
@@ -91,7 +160,23 @@ class Comments
     }
 
     /**
-     * @return mixed
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return Comments
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->created_at = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -99,12 +184,26 @@ class Comments
     }
 
     /**
-     * @return mixed
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @return Comments
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updated_at = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
         return $this->updated_at;
     }
-
-
 }
