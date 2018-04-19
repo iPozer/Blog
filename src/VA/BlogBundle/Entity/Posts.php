@@ -31,7 +31,7 @@ class Posts
      * @ORM\ManyToOne(targetEntity="User", inversedBy="posts")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
-    protected $author;
+    protected $user;
 
 
     /**
@@ -276,27 +276,27 @@ class Posts
     }
 
     /**
-     * Set author
+     * Set user
      *
-     * @param \VA\BlogBundle\Entity\User $author
+     * @param \VA\BlogBundle\Entity\User $user
      *
      * @return Posts
      */
-    public function setAuthor(\VA\BlogBundle\Entity\User $author = null)
+    public function setUser(\VA\BlogBundle\Entity\User $user = null)
     {
-        $this->author = $author;
+        $this->user = $user;
 
         return $this;
     }
 
     /**
-     * Get author
+     * Get user
      *
      * @return \VA\BlogBundle\Entity\User
      */
-    public function getAuthor()
+    public function getUser()
     {
-        return $this->author;
+        return $this->user;
     }
 
     /**

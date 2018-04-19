@@ -58,12 +58,12 @@ class User
 
 
     /**
-     * @ORM\OneToMany(targetEntity="Posts", mappedBy="author")
+     * @ORM\OneToMany(targetEntity="Posts", mappedBy="user")
      */
     protected $posts;
 
     /**
-     * @ORM\OneToMany(targetEntity="VA\BlogBundle\Entity\Comments", mappedBy="author")
+     * @ORM\OneToMany(targetEntity="VA\BlogBundle\Entity\Comments", mappedBy="user")
      */
     protected $comments;
 

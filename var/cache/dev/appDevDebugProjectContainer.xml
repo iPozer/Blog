@@ -523,6 +523,9 @@
     <service id="VA\BlogBundle\Controller\UserAccountController" class="VA\BlogBundle\Controller\UserAccountController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
+    <service id="VA\BlogBundle\DataFixtures\ORM\PostsFixture" class="VA\BlogBundle\DataFixtures\ORM\PostsFixture" public="false" autowire="true" autoconfigure="true">
+      <tag name="doctrine.fixture.orm"/>
+    </service>
     <service id="VA\BlogBundle\DataFixtures\ORM\UserFixture" class="VA\BlogBundle\DataFixtures\ORM\UserFixture" public="false" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
     </service>
@@ -3561,6 +3564,7 @@
       <argument type="service" id="service_container"/>
       <call method="addFixtures">
         <argument type="collection">
+          <argument type="service" id="VA\BlogBundle\DataFixtures\ORM\PostsFixture"/>
           <argument type="service" id="VA\BlogBundle\DataFixtures\ORM\UserFixture"/>
         </argument>
       </call>
@@ -3609,6 +3613,8 @@
     <service id="abstract.instanceof.VA\BlogBundle\Controller\SettingsController" class="VA\BlogBundle\Controller\SettingsController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.VA\BlogBundle\Controller\UserAccountController" class="VA\BlogBundle\Controller\UserAccountController" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.VA\BlogBundle\Controller\UserAccountController" class="VA\BlogBundle\Controller\UserAccountController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.VA\BlogBundle\DataFixtures\ORM\PostsFixture" class="VA\BlogBundle\DataFixtures\ORM\PostsFixture" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.VA\BlogBundle\DataFixtures\ORM\PostsFixture" class="VA\BlogBundle\DataFixtures\ORM\PostsFixture" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.VA\BlogBundle\DataFixtures\ORM\UserFixture" class="VA\BlogBundle\DataFixtures\ORM\UserFixture" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.VA\BlogBundle\DataFixtures\ORM\UserFixture" class="VA\BlogBundle\DataFixtures\ORM\UserFixture" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="service_locator.sr6ctxe" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">

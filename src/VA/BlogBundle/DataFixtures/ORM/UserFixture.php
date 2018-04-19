@@ -115,6 +115,29 @@ class UserFixture extends Fixture implements FixtureInterface
 
 
         $manager->flush();
+
+
+        $this->addReference('user-1', $user1);
+        $this->addReference('user-2', $user2);
+        $this->addReference('user-3', $user3);
+        $this->addReference('user-4', $user4);
+        $this->addReference('user-5', $user5);
+        $this->addReference('user-6', $user6);
+        $this->addReference('user-7', $user7);
+        $this->addReference('user-8', $user8);
+
     }
+
+
+
+
+    public function getOrder()
+    {
+        return 1;
+    }
+
+
+
+
 }
 

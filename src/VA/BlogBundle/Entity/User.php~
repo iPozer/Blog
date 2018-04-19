@@ -58,12 +58,12 @@ class User
 
 
     /**
-     * @ORM\OneToMany(targetEntity="Posts", mappedBy="author")
+     * @ORM\OneToMany(targetEntity="Posts", mappedBy="user")
      */
     protected $posts;
 
     /**
-     * @ORM\OneToMany(targetEntity="VA\BlogBundle\Entity\Comments", mappedBy="author")
+     * @ORM\OneToMany(targetEntity="VA\BlogBundle\Entity\Comments", mappedBy="user")
      */
     protected $comments;
 
@@ -80,10 +80,6 @@ class User
     {
         $this->posts = new ArrayCollection();
         $this->comments = new ArrayCollection();
-
-//        $this->setCreatedAt(new \DateTime());
-//        $this->setUpdatedAt(new \DateTime());
-
 
     }
 
@@ -331,5 +327,29 @@ class User
     public function getComments()
     {
         return $this->comments;
+    }
+
+    /**
+     * Set userGender
+     *
+     * @param string $userGender
+     *
+     * @return User
+     */
+    public function setUserGender($userGender)
+    {
+        $this->user_gender = $userGender;
+
+        return $this;
+    }
+
+    /**
+     * Get userGender
+     *
+     * @return string
+     */
+    public function getUserGender()
+    {
+        return $this->user_gender;
     }
 }
