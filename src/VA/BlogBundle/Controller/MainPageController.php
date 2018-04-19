@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class MainPageController extends Controller
 {
     /**
-     * @Route("/", name = "VA_blog_mainpage")
+     * @Route("/", name = "VA_blog_mainpage", methods = {"GET"})
      */
     public function indexAction()
     {

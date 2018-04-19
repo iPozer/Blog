@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class MainPageShowPostController extends Controller
 {
     /**
-     * @Route("/post{id}", name = "VA_blog_post")
+     * @Route("/post{id}", name = "VA_blog_post", methods = {"GET"})
      */
     public function indexPostAction($id)
     {

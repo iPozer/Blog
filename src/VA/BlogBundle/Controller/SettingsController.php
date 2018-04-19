@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class SettingsController extends Controller
 {
     /**
-     * @Route("/settings", name = "VA_blog_settings")
+     * @Route("/settings", name = "VA_blog_settings", methods = {"GET"})
      */
     public function indexAction()
     {

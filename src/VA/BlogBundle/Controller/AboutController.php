@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class AboutController extends Controller
 {
     /**
-     * @Route("/about", name = "VA_blog_about")
+     * @Route("/about", name = "VA_blog_about", methods = {"GET"})
      */
     public function indexAction()
     {
