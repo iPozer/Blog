@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3f69e01-0274-468a-9fca-0cc7704f21ac" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/CommentsFixture" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/PostsFixture.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/CommentsFixture.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/CommentsFixture" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/PostsFixture.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/PostsFixture.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/UserFixture.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/UserFixture.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VA/BlogBundle/Entity/Comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VA/BlogBundle/Entity/Comments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VA/BlogBundle/Entity/Posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VA/BlogBundle/Entity/Posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VA/BlogBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VA/BlogBundle/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/logs/dev.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,20 +47,17 @@
       <file leaf-file-name="UserFixture.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/UserFixture.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="639">
-              <caret line="136" column="5" selection-start-line="133" selection-start-column="4" selection-end-line="136" selection-end-column="5" />
-              <folding>
-                <element signature="e#51#100#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1281">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostsFixture.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PostsFixture.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/PostsFixture.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="51" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="25" selection-end-column="51" />
+            <state relative-caret-position="525">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="e#51#94#0#PHP" expanded="true" />
               </folding>
@@ -76,13 +65,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentFixtures.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Blog2/src/Sibers/BlogBundle/DataFixtures/ORM/CommentFixtures.php">
+      <file leaf-file-name="CommentsFixture.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/CommentsFixture.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            <state relative-caret-position="225">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding>
-                <element signature="e#55#98#0#PHP" expanded="true" />
+                <element signature="e#54#97#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,10 +128,11 @@
         <option value="$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/CommentsFixture" />
         <option value="$PROJECT_DIR$/src/VA/BlogBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/VA/BlogBundle/Entity/Comments.php" />
-        <option value="$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/UserFixture.php" />
         <option value="$PROJECT_DIR$/src/VA/BlogBundle/Entity/Posts.php" />
         <option value="$PROJECT_DIR$/../Blog2/src/Sibers/BlogBundle/DataFixtures/ORM/CommentFixtures.php" />
+        <option value="$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/UserFixture.php" />
         <option value="$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/PostsFixture.php" />
+        <option value="$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/CommentsFixture.php" />
       </list>
     </option>
   </component>
@@ -368,7 +358,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58962000" />
+    <option name="totallyTimeSpent" value="59826000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1280" height="994" extended-state="6" />
@@ -380,7 +370,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32918552" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21015625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21015625" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32918552" />
@@ -420,13 +410,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MainPage.php" />
     <entry file="file://$PROJECT_DIR$/app/Resources/views/main/show.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MainController.php" />
@@ -539,16 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/CommentsFixture">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
-          <folding>
-            <element signature="e#51#94#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures/FixtureInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -565,16 +538,6 @@
           <caret line="63" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="e#40#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/UserFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="136" column="5" selection-start-line="133" selection-start-column="4" selection-end-line="136" selection-end-column="5" />
-          <folding>
-            <element signature="e#51#100#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -602,22 +565,49 @@
     <entry file="file://$PROJECT_DIR$/../Blog2/src/Sibers/BlogBundle/Entity/Comment.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/CommentsFixture">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" lean-forward="true" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="e#51#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../Blog2/src/Sibers/BlogBundle/DataFixtures/ORM/CommentFixtures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        <state relative-caret-position="730">
+          <caret line="127" column="1" lean-forward="true" selection-start-line="3" selection-end-line="127" selection-end-column="1" />
           <folding>
             <element signature="e#55#98#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/UserFixture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1281">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/PostsFixture.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="51" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="25" selection-end-column="51" />
+        <state relative-caret-position="525">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="e#51#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VA/BlogBundle/DataFixtures/ORM/CommentsFixture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="e#54#97#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

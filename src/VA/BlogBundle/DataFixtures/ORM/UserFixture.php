@@ -7,6 +7,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use VA\BlogBundle\Entity\User;
+use VA\BlogBundle\Entity\Posts;
 
 
 class UserFixture extends Fixture implements FixtureInterface
