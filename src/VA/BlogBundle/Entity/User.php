@@ -62,7 +62,7 @@ class User
 
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable = true)
      */
     protected $slug;
 
@@ -74,8 +74,8 @@ class User
         $this->posts = new ArrayCollection();
         $this->comments = new ArrayCollection();
 
-        $this->setCreatedAt(new \DateTime());
-        $this->setUpdatedAt(new \DateTime());
+//        $this->setCreatedAt(new \DateTime());
+//        $this->setUpdatedAt(new \DateTime());
 
 
     }
