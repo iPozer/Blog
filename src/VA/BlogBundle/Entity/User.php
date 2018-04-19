@@ -81,10 +81,6 @@ class User
         $this->posts = new ArrayCollection();
         $this->comments = new ArrayCollection();
 
-//        $this->setCreatedAt(new \DateTime());
-//        $this->setUpdatedAt(new \DateTime());
-
-
     }
 
     /**
