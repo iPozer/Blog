@@ -29,6 +29,13 @@ class User
      */
     protected $user_login;
 
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $user_gender;
+    
+
     /**
      * @ORM\Column(type="date")
      */
@@ -324,5 +331,29 @@ class User
     public function getComments()
     {
         return $this->comments;
+    }
+
+    /**
+     * Set userGender
+     *
+     * @param string $userGender
+     *
+     * @return User
+     */
+    public function setUserGender($userGender)
+    {
+        $this->user_gender = $userGender;
+
+        return $this;
+    }
+
+    /**
+     * Get userGender
+     *
+     * @return string
+     */
+    public function getUserGender()
+    {
+        return $this->user_gender;
     }
 }
