@@ -3,6 +3,7 @@
 namespace VA\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="VA\BlogBundle\Entity\Repository\UserRepository")
@@ -49,10 +50,14 @@ class User
     protected $avatar_image;
 
 
+    /**
+     * @ORM\OneToMany(targetEntity="Posts", mappedBy="author")
+     */
+    protected $posts;
 
-    protected $post;
-
-
+    /**
+     * @ORM\OneToMany(targetEntity="VA\BlogBundle\Entity\Comments", mappedBy="author")
+     */
     protected $comments;
 
 
@@ -61,6 +66,17 @@ class User
      */
     protected $slug;
 
+
+
+
+    public function __construct()
+    {
+        $this->posts = new ArrayCollection();
+        $this->comments = new ArrayCollection();
+
+        $this->setCreatedAt(new \DateTime());
+        $this->setUpdatedAt(new \DateTime());
+
+
+    }
 }
-
-

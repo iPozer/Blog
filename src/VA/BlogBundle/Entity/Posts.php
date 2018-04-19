@@ -3,13 +3,14 @@
 namespace VA\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity(repositoryClass="VA\BlogBundle\Entity\Repository\PostRepository")
+ * @ORM\Entity(repositoryClass="VA\BlogBundle\Entity\Repository\PostsRepository")
  * @ORM\Table(name="post")
  * @ORM\HasLifecycleCallbacks()
  */
-class Post
+class Posts
 {
     /**
      * @ORM\Id
@@ -26,7 +27,10 @@ class Post
     protected $title;
 
 
-
+    /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="posts")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
     protected $author;
 
 
@@ -35,7 +39,9 @@ class Post
      */
     protected $post;
 
-
+    /**
+     * @ORM\OneToMany(targetEntity="Comments", mappedBy="posts")
+     */
 
     protected $comments;
 
@@ -71,6 +77,26 @@ class Post
 
 
 
+
+    public function __construct()
+    {
+        $this->setCreatedAt(new \DateTime());
+        $this->setUpdatedAt(new \DateTime());
+        $this->comments = new ArrayCollection();
+
+    }
+
+    
+    public function setUpdatedValue()
+    {
+        $this->setUpdatedAt(new \DateTime());
+    }
+
+
+
+
+
+
     /**
      * Get id
      *
@@ -86,7 +112,7 @@ class Post
      *
      * @param string $title
      *
-     * @return Post
+     * @return Posts
      */
     public function setTitle($title)
     {
@@ -110,7 +136,7 @@ class Post
      *
      * @param string $post
      *
-     * @return Post
+     * @return Posts
      */
     public function setPost($post)
     {
@@ -134,7 +160,7 @@ class Post
      *
      * @param string $image
      *
-     * @return Post
+     * @return Posts
      */
     public function setImage($image)
     {
@@ -158,7 +184,7 @@ class Post
      *
      * @param string $tags
      *
-     * @return Post
+     * @return Posts
      */
     public function setTags($tags)
     {
@@ -182,7 +208,7 @@ class Post
      *
      * @param \DateTime $createdAt
      *
-     * @return Post
+     * @return Posts
      */
     public function setCreatedAt($createdAt)
     {
@@ -206,7 +232,7 @@ class Post
      *
      * @param \DateTime $updatedAt
      *
-     * @return Post
+     * @return Posts
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -230,7 +256,7 @@ class Post
      *
      * @param string $slug
      *
-     * @return Post
+     * @return Posts
      */
     public function setSlug($slug)
     {
@@ -247,5 +273,63 @@ class Post
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Set author
+     *
+     * @param \VA\BlogBundle\Entity\User $author
+     *
+     * @return Posts
+     */
+    public function setAuthor(\VA\BlogBundle\Entity\User $author = null)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return \VA\BlogBundle\Entity\User
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    /**
+     * Add comment
+     *
+     * @param \VA\BlogBundle\Entity\Comments $comment
+     *
+     * @return Posts
+     */
+    public function addComment(\VA\BlogBundle\Entity\Comments $comment)
+    {
+        $this->comments[] = $comment;
+
+        return $this;
+    }
+
+    /**
+     * Remove comment
+     *
+     * @param \VA\BlogBundle\Entity\Comments $comment
+     */
+    public function removeComment(\VA\BlogBundle\Entity\Comments $comment)
+    {
+        $this->comments->removeElement($comment);
+    }
+
+    /**
+     * Get comments
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComments()
+    {
+        return $this->comments;
     }
 }

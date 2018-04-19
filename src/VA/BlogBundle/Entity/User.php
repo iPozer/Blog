@@ -3,6 +3,7 @@
 namespace VA\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="VA\BlogBundle\Entity\Repository\UserRepository")
@@ -49,10 +50,14 @@ class User
     protected $avatar_image;
 
 
+    /**
+     * @ORM\OneToMany(targetEntity="Posts", mappedBy="author")
+     */
+    protected $posts;
 
-    protected $post;
-
-
+    /**
+     * @ORM\OneToMany(targetEntity="VA\BlogBundle\Entity\Comments", mappedBy="author")
+     */
     protected $comments;
 
 
@@ -61,6 +66,19 @@ class User
      */
     protected $slug;
 
+
+
+
+    public function __construct()
+    {
+        $this->posts = new ArrayCollection();
+        $this->comments = new ArrayCollection();
+
+        $this->setCreatedAt(new \DateTime());
+        $this->setUpdatedAt(new \DateTime());
+
+
+    }
 
     /**
      * Get id
@@ -238,5 +256,73 @@ class User
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Add post
+     *
+     * @param \VA\BlogBundle\Entity\Posts $post
+     *
+     * @return User
+     */
+    public function addPost(\VA\BlogBundle\Entity\Posts $post)
+    {
+        $this->posts[] = $post;
+
+        return $this;
+    }
+
+    /**
+     * Remove post
+     *
+     * @param \VA\BlogBundle\Entity\Posts $post
+     */
+    public function removePost(\VA\BlogBundle\Entity\Posts $post)
+    {
+        $this->posts->removeElement($post);
+    }
+
+    /**
+     * Get posts
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPosts()
+    {
+        return $this->posts;
+    }
+
+    /**
+     * Add comment
+     *
+     * @param \VA\BlogBundle\Entity\Comments $comment
+     *
+     * @return User
+     */
+    public function addComment(\VA\BlogBundle\Entity\Comments $comment)
+    {
+        $this->comments[] = $comment;
+
+        return $this;
+    }
+
+    /**
+     * Remove comment
+     *
+     * @param \VA\BlogBundle\Entity\Comments $comment
+     */
+    public function removeComment(\VA\BlogBundle\Entity\Comments $comment)
+    {
+        $this->comments->removeElement($comment);
+    }
+
+    /**
+     * Get comments
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComments()
+    {
+        return $this->comments;
     }
 }

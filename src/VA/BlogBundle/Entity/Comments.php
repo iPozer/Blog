@@ -3,6 +3,7 @@
 namespace VA\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="VA\BlogBundle\Entity\Repository\CommentsRepository")
@@ -19,14 +20,16 @@ class Comments
     protected $id;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="comments")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     protected $author;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\ManyToOne(targetEntity="Posts", inversedBy="comments")
+     * @ORM\JoinColumn(name="posts_id", referencedColumnName="id")
      */
-    protected $post;
+    protected $posts;
 
     /**
      * @ORM\Column(type="text")
@@ -50,7 +53,19 @@ class Comments
 
 
 
+    public function __construct()
+    {
+        $this->setCreatedAt(new \DateTime());
+        $this->setUpdatedAt(new \DateTime());
 
+        $this->setApproved(true);
+    }
+
+
+    public function setUpdatedAtValue()
+    {
+        $this->setUpdatedAt(new \DateTime());
+    }
 
 
     /**
@@ -61,54 +76,6 @@ class Comments
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set author
-     *
-     * @param string $author
-     *
-     * @return Comments
-     */
-    public function setAuthor($author)
-    {
-        $this->author = $author;
-
-        return $this;
-    }
-
-    /**
-     * Get author
-     *
-     * @return string
-     */
-    public function getAuthor()
-    {
-        return $this->author;
-    }
-
-    /**
-     * Set post
-     *
-     * @param string $post
-     *
-     * @return Comments
-     */
-    public function setPost($post)
-    {
-        $this->post = $post;
-
-        return $this;
-    }
-
-    /**
-     * Get post
-     *
-     * @return string
-     */
-    public function getPost()
-    {
-        return $this->post;
     }
 
     /**
@@ -205,5 +172,53 @@ class Comments
     public function getUpdatedAt()
     {
         return $this->updated_at;
+    }
+
+    /**
+     * Set author
+     *
+     * @param \VA\BlogBundle\Entity\User $author
+     *
+     * @return Comments
+     */
+    public function setAuthor(\VA\BlogBundle\Entity\User $author = null)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return \VA\BlogBundle\Entity\User
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    /**
+     * Set posts
+     *
+     * @param \VA\BlogBundle\Entity\Posts $posts
+     *
+     * @return Comments
+     */
+    public function setPosts(\VA\BlogBundle\Entity\Posts $posts = null)
+    {
+        $this->posts = $posts;
+
+        return $this;
+    }
+
+    /**
+     * Get posts
+     *
+     * @return \VA\BlogBundle\Entity\Posts
+     */
+    public function getPosts()
+    {
+        return $this->posts;
     }
 }
