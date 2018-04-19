@@ -55,7 +55,7 @@ class User
 
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="string")
      */
     protected $comments;
 
