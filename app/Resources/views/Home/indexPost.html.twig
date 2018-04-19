@@ -1,0 +1,62 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Post{% endblock %}
+
+{% block body %}
+
+    <div id = "article2">
+
+
+                <div class="artTitle2">
+                    <h2>Title</h2>
+                </div>
+                <div class = "autor2">
+                    <span>Author: author</span>
+                </div>
+                <div class="datePubl2">
+                    <span>Date: Date</span>
+                </div>
+                <div class = "timePubl2">
+                    <span>Time: Time </span>
+                </div>
+
+
+                <div class="picArt2">
+                    <img id = "artPic" src="#" />
+                </div>
+
+                <div class="descriptArt2">
+
+                        <span>
+                        Что-то тут написано
+                        </span>
+                </div>
+
+
+
+                <div class = "comments">
+                    <span id = "comments" style = "margin-top: 5px; ">1 comments </span>
+                    <span id = "views" style = "margin-top: 5px;">123 views</span>
+
+                    <div id = "userNameLink">
+                        <img src = "#" id = "avatar_min">
+                        <input type = "text" id = "write_your_comment" placeholder="Write your comment..." title = "Unregistered users can't comment!">  {#make it resizible by jquery#}
+                        <input type = "submit" value = "Comment">
+                    </div>
+                    <div class = "comments">
+                        <div id = "userNameLink">
+                            <img src = "#" id = "avatar_min">
+                            <span id = "com"> Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. </span>
+                            <span id = "time_com"> Time: 00:46:08</span>
+                            <span id= "reply_on"> Reply </span>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+    </div>
+{% endblock %}

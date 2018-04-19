@@ -500,7 +500,7 @@
   </parameters>
   <services>
     <service id="service_container" class="Symfony\Component\DependencyInjection\ContainerInterface" public="true" synthetic="true"/>
-    <service id="VA\BlogBundle\Controller\DefaultController" class="VA\BlogBundle\Controller\DefaultController" public="true" autowire="true" autoconfigure="true">
+    <service id="VA\BlogBundle\Controller\MainPageController" class="VA\BlogBundle\Controller\MainPageController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
     <service id="VA\BlogBundle\VABlogBundle" class="VA\BlogBundle\VABlogBundle" public="false" autowire="true" autoconfigure="true"/>
@@ -2659,14 +2659,6 @@
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/home/valeria/projects/Blog/src/VA/BlogBundle/Resources/views</argument>
-        <argument>VABlog</argument>
-      </call>
-      <call method="addPath">
-        <argument>/home/valeria/projects/Blog/src/VA/BlogBundle/Resources/views</argument>
-        <argument>!VABlog</argument>
-      </call>
-      <call method="addPath">
         <argument>/home/valeria/projects/Blog/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
@@ -3548,8 +3540,8 @@
         <argument>server:log</argument>
       </call>
     </service>
-    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.VA\BlogBundle\Controller\DefaultController" class="VA\BlogBundle\Controller\DefaultController" public="false" autowire="true" abstract="true"/>
-    <service id="abstract.instanceof.VA\BlogBundle\Controller\DefaultController" class="VA\BlogBundle\Controller\DefaultController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.VA\BlogBundle\Controller\MainPageController" class="VA\BlogBundle\Controller\MainPageController" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.VA\BlogBundle\Controller\MainPageController" class="VA\BlogBundle\Controller\MainPageController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="service_locator.sr6ctxe" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>

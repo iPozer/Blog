@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+
+{% block nav %}
+    <div id = "userNameLink">
+        <img src = "#" id = "avatar_min">
+        <a href = "/username" id = "un"> userlogin </a>
+    </div>
+{% endblock %}
+
+
+
+{% block body %}
+
+    {% block User %}
+        <div id = "User">
+            <div id = "UserWrapper">
+
+                <div id = "cover_photo">
+                    <img src = "#">
+                    <button id = "add_cover">Add a cover photo</button>
+
+                    <div class = "avatar_photo">
+                        <img src = "{{ asset('images/avatar.svg') }}">
+                    </div>
+
+
+
+                </div>
+
+                <div class = "horizon_menu">
+                    <ul>
+                        <li><a href= "#"> Posts</a></li>
+                        <li><a href= "#"> Followers</a></li>
+                        <li><a href= "#"> Friends</a></li>
+                        <li><span class = "newP"> Add new post </span></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div id = "UserWall">
+
+            {%  block WallContent %}
+            {%  endblock %}
+
+            </div>
+        </div>
+    {% endblock %}
+
+
+
+
+{% endblock %}
+
+
+
+{% block sidebar %}
+
+    <div class = "rightMenu">
+        <table>
+            <tr>
+                <td><img class = "icons_right" src  = "#"></td>
+                <td><a href= "#">Feed</a></td>
+                <td><img src  = "#" class = "items_values"></td>
+            </tr>
+            <tr>
+                <td><img class = "icons_right" src  = "#"></td>
+                <td><a href= "#">About Me</a></td>
+                <td><img src  = "#" class = "items_values"></td>
+            </tr>
+            <tr>
+                <td><img class = "icons_right" src  = "#"></td>
+                <td><a href= "#">Friends</a></td>
+                <td><img src  = "#" class = "items_values"></td>
+            </tr>
+            <tr>
+                <td><img class = "icons_right" src  = "#"></td>
+                <td><a href= "#">Messages</a></td>
+                <td><img src  = "#" class = "items_values"></td>
+            </tr>
+        </table>
+    </div>
+
+{% endblock %}
+
+
+
