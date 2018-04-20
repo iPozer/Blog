@@ -22,7 +22,8 @@ class PostsFixture extends Fixture implements FixtureInterface
     {
         $posts1 = new Posts();
         $posts1->setTitle('Good job!');
-        $posts1->setUser($manager->merge($this->getReference('user-1')));
+//        $posts1->setUser($manager->merge($this->getReference('user-1')));
+        $posts1->setUser($posts1->getUser());
         $posts1->setPost('A veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery short post');
         $posts1->setImage('beach.jpg');
         $posts1->setTags('nice, employment, philosophy, interpretations, own view, work, job');
